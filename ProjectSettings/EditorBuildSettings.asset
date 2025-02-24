@@ -8,9 +8,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Samples/Ubiq/1.0.0-pre.11/Demo (XRI)/Demo.unity
     guid: 2de505d34345ab340bdde30d419b24eb
+  - enabled: 0
+    path: Assets/avatar-example/Avatar Example.unity
+    guid: 2e0581e857a80de44a4309c477e7c7d0
+  - enabled: 0
+    path: Assets/Scenes/Gauri-attach.unity
+    guid: e73948d81a6151c43aa467d890e879d6
+  - enabled: 1
+    path: Assets/Scenes/NewAttach.unity
+    guid: 0708ff817d240f94c873128677ea8c89
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ac4b97891ac768440bef27b1ebef50ca, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
