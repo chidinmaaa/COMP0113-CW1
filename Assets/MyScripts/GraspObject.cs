@@ -76,6 +76,10 @@ public class GraspObject : MonoBehaviour
         if (assignedUserID != "-1" && currentUserID != assignedUserID)
         {
             UnityEngine.Debug.Log($"User {currentUserID} is NOT allowed to grab this object (Owned by {assignedUserID})");
+
+            // trying to not allow the object to move
+            transform.position = lastPosition;
+            transform.rotation = lastRotation;
             return;
         }
         
@@ -84,7 +88,7 @@ public class GraspObject : MonoBehaviour
         isHeld = true;
 
         // Notify the network about ownership change
-        context.SendJson(new Message(currentUserID, true, lastPosition, lastRotation));
+        context.SendJson(new Message(currentUserID, true, transform.position, transform.rotation));
         UnityEngine.Debug.Log("heyyyyy");
     }
 
