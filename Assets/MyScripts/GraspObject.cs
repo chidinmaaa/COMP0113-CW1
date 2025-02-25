@@ -31,12 +31,21 @@ public class GraspObject : MonoBehaviour
         roomClient = RoomClient.Find(this);
         assignedUserID = initialUserID;
 
+        //if (roomClient == null)
+        //{
+        //    UnityEngine.Debug.Log($"[GraspObject] room client is null");
+        //}
+        //else
+        //{
+        //    UnityEngine.Debug.Log($"[GraspObject] room client is NOT null");
+        //}
+
         interactable.selectEntered.AddListener(OnGrab);
         interactable.selectExited.AddListener(OnRelease);
 
         UnityEngine.Debug.Log("[GraspObject] assigned ID = " + assignedUserID);
         
-        UnityEngine.Debug.Log("[GraspObject] current ID = " + UserIDManager.Instance.GetUserID(roomClient.Me.uuid));
+        UnityEngine.Debug.Log("[GraspObject] peer uuid = " + roomClient.Me.uuid);
     }
 
     private void OnDestroy()
@@ -63,13 +72,13 @@ public class GraspObject : MonoBehaviour
         string currentUserID = UserIDManager.Instance.GetUserID(roomClient.Me.uuid);
 
         // Allow only the assigned user or any user if "-1"
-        /*
+        
         if (assignedUserID != "-1" && currentUserID != assignedUserID)
         {
             UnityEngine.Debug.Log($"User {currentUserID} is NOT allowed to grab this object (Owned by {assignedUserID})");
             return;
         }
-        */
+        
 
         owner = true;
         isHeld = true;

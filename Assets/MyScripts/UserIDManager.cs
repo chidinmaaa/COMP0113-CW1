@@ -1,3 +1,49 @@
+﻿/*
+using System.Collections.Generic;
+using System.Diagnostics;
+using Ubiq.Rooms;
+using UnityEngine;
+
+namespace Ubiq.Avatars
+{
+    public class UserIDManager : AvatarManager
+    {
+        private Dictionary<string, string> userIDs = new Dictionary<string, string>(); // Maps peer UUIDs to User IDs
+
+        private void Start()
+        {
+            base.Start(); // Call AvatarManager's Start()
+            RoomClient.OnPeerUpdated.AddListener(AssignUserID);
+        }
+
+        private void OnDestroy()
+        {
+            RoomClient.OnPeerUpdated.RemoveListener(AssignUserID);
+        }
+
+        private void AssignUserID(IPeer peer)
+        {
+            if (!userIDs.ContainsKey(peer.uuid))
+            {
+                userIDs[peer.uuid] = GenerateUserID(peer.uuid);
+                UnityEngine.Debug.Log($"✅ Assigned User ID: {userIDs[peer.uuid]} to Peer: {peer.uuid}");
+            }
+        }
+
+        public string GetUserID(string peerUUID)
+        {
+            return userIDs.ContainsKey(peerUUID) ? userIDs[peerUUID] : null;
+        }
+
+        private string GenerateUserID(string peerUUID)
+        {
+            return $"User_{userIDs.Count + 1}"; // Simple sequential User ID
+        }
+    }
+}
+*/
+
+
 using System.Collections.Generic;
 using Ubiq.Rooms;
 using Ubiq.Messaging;
@@ -7,6 +53,7 @@ using System.Diagnostics;
 public class UserIDManager : MonoBehaviour
 {
     public static UserIDManager Instance { get; private set; }
+    //public AvatarManager manager;
 
     private Dictionary<string, string> userIDs = new Dictionary<string, string>(); // Maps peer UUIDs to assigned user IDs
     private RoomClient roomClient;
@@ -26,8 +73,17 @@ public class UserIDManager : MonoBehaviour
 
     private void Start()
     {
-        roomClient = GetComponent<RoomClient>();
-        roomClient.OnPeerUpdated.AddListener(OnPeerUpdated);
+        //roomClient = GetComponent<RoomClient>();
+        roomClient = RoomClient.Find(this);
+        //roomClient = manager.GetComponent<RoomClient>();
+        if (roomClient == null)
+        {
+            UnityEngine.Debug.Log($"[UserIDManager] room client is null");
+        } else
+        {
+            UnityEngine.Debug.Log($"[UserIDManager] room client is NOT null");
+        }
+            roomClient.OnPeerUpdated.AddListener(OnPeerUpdated);
     }
 
     private void OnDestroy()
@@ -37,6 +93,8 @@ public class UserIDManager : MonoBehaviour
 
     private void OnPeerUpdated(IPeer peer)
     {
+        UnityEngine.Debug.Log($"[UserIDManager] Peer ID {peer.uuid} being updated");
+
         if (!userIDs.ContainsKey(peer.uuid))
         {
             userIDs[peer.uuid] = GenerateUserID(peer.uuid);
