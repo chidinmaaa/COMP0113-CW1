@@ -6,13 +6,14 @@ using Ubiq.Rooms;
 //#if XRI_3_0_7_OR_NEWER
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using System.Diagnostics;
 //#endif
 
 public class GraspObject : MonoBehaviour
 {
 //#if XRI_3_0_7_OR_NEWER
     private NetworkContext context;
-    private XRSimpleInteractable interactable;
+    private XRGrabInteractable interactable;
     private RoomClient roomClient;
     private bool isHeld = false;
     private bool owner = false;
@@ -26,7 +27,7 @@ public class GraspObject : MonoBehaviour
     private void Start()
     {
         context = NetworkScene.Register(this);
-        interactable = GetComponent<XRSimpleInteractable>();
+        interactable = GetComponent<XRGrabInteractable>();
         roomClient = RoomClient.Find(this);
         assignedUserID = initialUserID;
 
@@ -62,17 +63,20 @@ public class GraspObject : MonoBehaviour
         string currentUserID = UserIDManager.Instance.GetUserID(roomClient.Me.uuid);
 
         // Allow only the assigned user or any user if "-1"
+        /*
         if (assignedUserID != "-1" && currentUserID != assignedUserID)
         {
             UnityEngine.Debug.Log($"User {currentUserID} is NOT allowed to grab this object (Owned by {assignedUserID})");
             return;
         }
+        */
 
         owner = true;
         isHeld = true;
 
         // Notify the network about ownership change
         context.SendJson(new Message(currentUserID, true, lastPosition, lastRotation));
+        UnityEngine.Debug.Log("heyyyyy");
     }
 
     private void OnRelease(SelectExitEventArgs eventArgs)
