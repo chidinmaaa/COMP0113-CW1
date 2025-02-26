@@ -23,7 +23,7 @@ namespace AvatarFactory
         void Start()
         {
             avatarManager = gameObject.GetComponent<AvatarManager>();
-            Dictionary<IPeer, Ubiq.Avatars.Avatar>.KeyCollection players = avatarManager.playerAvatars.Keys;
+            //Dictionary<IPeer, Ubiq.Avatars.Avatar>.KeyCollection players = avatarManager.playerAvatars.Keys;
 
             //List<string> player_ids = [];
 
@@ -31,10 +31,10 @@ namespace AvatarFactory
             //    {
             //    votes.add(players[i].ToString(), 0);
             //    }
-            foreach (IPeer peer in players)
-            {
-                Debug.Log(peer);
-            }
+            //foreach (IPeer peer in players)
+            //{
+            //    Debug.Log(peer);
+            //}
 
         }
 
