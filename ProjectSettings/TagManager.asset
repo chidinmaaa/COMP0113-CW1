@@ -8,6 +8,8 @@ TagManager:
   - Teleport
   - Player1
   - Player2
+  - Door
+  - Pad
   layers:
   - Default
   - TransparentFX
