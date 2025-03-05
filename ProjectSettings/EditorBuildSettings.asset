@@ -17,9 +17,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Gauri-attach.unity
     guid: e73948d81a6151c43aa467d890e879d6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/NewAttach.unity
     guid: 0708ff817d240f94c873128677ea8c89
+  - enabled: 1
+    path: Assets/Scenes/Factory.unity
+    guid: fbcf114babb50d649b371e627545fffa
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ac4b97891ac768440bef27b1ebef50ca, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
