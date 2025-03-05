@@ -23,6 +23,7 @@ public class ChangeCostume : MonoBehaviour
     
     private void Start()
     {
+        Debug.Log("Alive");
         // Connect up the event for the XRI button.
         interactable = GetComponent<XRSimpleInteractable>();
         interactable.selectEntered.AddListener(Interactable_SelectEntered);
@@ -45,10 +46,11 @@ public class ChangeCostume : MonoBehaviour
     private void Interactable_SelectEntered(SelectEnterEventArgs arg0)
     {
         // The button has been pressed.
-        
+
         // Change the local avatar prefab to the default one, because we have
         // a few costumes for that avatar bundled with Ubiq. The AvatarManager
         // will do the work of letting other peers know about the prefab change.
+        Debug.Log("HEY");
         avatarManager.avatarPrefab = prefab; 
         
         // Also, set the costume to a new, random one. We use a coroutine to
