@@ -26,8 +26,12 @@ public class respawnOnCol : MonoBehaviour
     {
         //Debug.Log(other.gameObject.name);
         rigidbody.linearVelocity = Vector3.zero;
+<<<<<<< Updated upstream
         rigidbody.angularVelocity = Vector3.zero;
         rigidbody.useGravity = false;
+=======
+        //rigidbody.angularVelocity = Vector3.zero;
+>>>>>>> Stashed changes
         //transform.position = originalPos;
         transform.SetWorldPose(worldPose);
     }

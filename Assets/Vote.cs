@@ -27,6 +27,10 @@ namespace AvatarFactory
             roomClient = networkScene.GetComponentInChildren<RoomClient>();
             avatarManager = networkScene.GetComponentInChildren<AvatarManager>();  // add avatar manager attribute to store vote. also need to keep track of which users have voted already. use room client ids
             //votingManager = avatarManager.GetComponent<VotingManager>();
+<<<<<<< Updated upstream
+=======
+            votingManager = gameObject.GetComponent<VotingManager>();
+>>>>>>> Stashed changes
         }
 
         private void Interactable_SelectEntered(SelectEnterEventArgs arg0)
@@ -36,6 +40,10 @@ namespace AvatarFactory
 
         private void CastVote()
         {
+<<<<<<< Updated upstream
+=======
+            votingManager.totalVotes += 1;
+>>>>>>> Stashed changes
             //Dictionary<string, int> votes = votingManager.votes;
             //if (votes[roomClient.Me] == 0) // could make true or false
             //if (true)

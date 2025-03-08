@@ -3,6 +3,11 @@ using UnityEngine;
 public class ActivateBelt : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+<<<<<<< Updated upstream
+=======
+    public bool on; // make private later
+    
+>>>>>>> Stashed changes
     void Start()
     {
         
@@ -14,3 +19,11 @@ public class ActivateBelt : MonoBehaviour
         
     }
 }
+<<<<<<< Updated upstream
+=======
+
+
+
+
+
+>>>>>>> Stashed changes
