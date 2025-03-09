@@ -31,10 +31,8 @@ public class ExitRoom : MonoBehaviour
         click = GetComponent<AudioSource>();
         controller = GetComponentInParent<OpenDoors>();
         button_name = transform.name;
-<<<<<<< Updated upstream
         Debug.Log(button_name);
-=======
->>>>>>> Stashed changes
+
     }
 
     private void OnDestroy()
@@ -49,38 +47,22 @@ public class ExitRoom : MonoBehaviour
     private void Interactable_HoverEntered(HoverEnterEventArgs arg0)
     {
         click.Play(0);
-<<<<<<< Updated upstream
-        if (button_name == "Button A")
-        {
-            controller.button_A_active = true;
-        }
-        else
-        {
-=======
         if (button_name == "Button A"){
             controller.button_A_active = true;
         }
         else {
->>>>>>> Stashed changes
             controller.button_B_active = true;
         }
     }
 
     private void Interactable_HoverExited(HoverExitEventArgs arg0)
     {
-<<<<<<< Updated upstream
         if (button_name == "Button A")
         {
             controller.button_A_active = false;
         }
         else
         {
-=======
-        if (button_name == "Button A"){
-            controller.button_A_active = false;
-        }
-        else {
->>>>>>> Stashed changes
             controller.button_B_active = false;
         }
     }
