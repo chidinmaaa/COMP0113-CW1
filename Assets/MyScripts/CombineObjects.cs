@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class CombineObjects : MonoBehaviour
-{/*
+{
     public string combineWithTag; // The tag of the object it can merge with
     public GameObject combinedPrefab; // Prefab of the new combined object
 
@@ -22,12 +22,14 @@ public class CombineObjects : MonoBehaviour
         // Instantiate the combined object
         GameObject newObject = Instantiate(combinedPrefab, transform.position, Quaternion.identity);
 
-        // Assign network ownership
-        var networkedObject = newObject.GetComponent<Ubiq.Messaging.NetworkedObject>();
-        if (networkedObject)
-        {
-            networkedObject.TakeOwnership();
-        }
+        UnityEngine.Debug.Log("combined objects");
+
+        //// Assign network ownership
+        //var networkedObject = newObject.GetComponent<Ubiq.Messaging.NetworkedObject>();
+        //if (networkedObject)
+        //{
+        //    networkedObject.TakeOwnership();
+        //}
     }
-    */
+    
 }

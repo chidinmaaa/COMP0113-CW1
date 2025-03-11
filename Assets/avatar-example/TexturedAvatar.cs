@@ -94,7 +94,7 @@ public class TexturedAvatar : MonoBehaviour
 
             OnTextureChanged.Invoke(texture);
 
-            if(avatar.IsLocal)
+            if (avatar.IsLocal)
             {
                 roomClient.Me["ubiq.avatar.texture.uuid"] = this.uuid;
             }

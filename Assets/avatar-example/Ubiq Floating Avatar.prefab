@@ -88,8 +88,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfbaebc4de9b4d72981f451ceb9c8f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Textures: {fileID: 11400000, guid: 711a32cdfac3cd644a666f4575bf6f22, type: 2}
-  RandomTextureOnSpawn: 1
+  Textures: {fileID: 11400000, guid: 3a163daffbb07fd409cade3c2076888f, type: 2}
+  RandomTextureOnSpawn: 0
   SaveTextureSetting: 1
   OnTextureChanged:
     m_PersistentCalls:
@@ -191,6 +191,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3444175152561107260}
     m_Modifications:
+    - target: {fileID: 253003865581486029, guid: b0d64f917d2447e4f85037ad6283d5bf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 77b5fb67d1b3d2f46ad9d6b655a375e7, type: 2}
     - target: {fileID: 2133178104073127332, guid: b0d64f917d2447e4f85037ad6283d5bf, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
@@ -243,6 +247,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5517618425911502283, guid: b0d64f917d2447e4f85037ad6283d5bf, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517618425911502283, guid: b0d64f917d2447e4f85037ad6283d5bf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5a69dd35384879040b3fef05117edfc1, type: 2}
+    - target: {fileID: 5517618425911502283, guid: b0d64f917d2447e4f85037ad6283d5bf, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5a69dd35384879040b3fef05117edfc1, type: 2}
     m_RemovedComponents:
     - {fileID: 1298553101150500170, guid: b0d64f917d2447e4f85037ad6283d5bf, type: 3}
     m_RemovedGameObjects: []
