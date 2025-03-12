@@ -41,8 +41,7 @@ public class respawnOnCol : MonoBehaviour
         rigidbody.linearVelocity = Vector3.zero;
         rigidbody.angularVelocity = Vector3.zero;
         rigidbody.useGravity = false;
-        //rigidbody.angularVelocity = Vector3.zero;
-        //transform.position = originalPos;
+
         transform.SetWorldPose(worldPose);
     }
 }
