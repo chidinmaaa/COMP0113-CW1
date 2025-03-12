@@ -9,10 +9,10 @@ public class PadCollider : MonoBehaviour
     private void OnTriggerEnter(Collider col)
     {
 
-        //Debug.Log(col.gameObject);
+        Debug.Log(col.gameObject);
         if (!_isPressed)
         {
-            curtain.transform.position += new Vector3(0, 4, 0);
+            curtain.transform.position += new Vector3(0, 2, 0);
             _isPressed = true;
         }
 
@@ -23,7 +23,7 @@ public class PadCollider : MonoBehaviour
     {
         if (_isPressed)
         {
-            curtain.transform.position -= new Vector3(0, 4, 0);
+            curtain.transform.position -= new Vector3(0, 2, 0);
             _isPressed =false;
         }
         Debug.Log("pad exit");

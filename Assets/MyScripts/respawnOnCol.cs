@@ -31,7 +31,7 @@ public class respawnOnCol : MonoBehaviour
     {
         //Debug.Log(other.gameObject.name);
 
-        if (other.gameObject.tag == "Head")
+        if (other.gameObject.CompareTag("Head"))
         {
             UnityEngine.Debug.Log("collided into head");
             Renderer HeadRenderer = other.gameObject.GetComponent<Renderer>();
