@@ -5,6 +5,7 @@ using Unity.XR.CoreUtils;
 public class respawnOnCol : MonoBehaviour
 {
     //Vector3 originalPos;
+   
     Rigidbody rigidbody;
     //SphereCollider sphereCollider;
     Pose worldPose;
@@ -14,6 +15,8 @@ public class respawnOnCol : MonoBehaviour
         //originalPos = transform.position;
         //Debug.Log(gameObject.name);
         //Debug.Log(originalPos);
+        Renderer renderer = GetComponent<Renderer>();
+        Material mat = renderer.material;
         rigidbody = gameObject.GetComponent<Rigidbody>();
         //sphereCollider = gameObject.GetComponent<SphereCollider>();
         worldPose = transform.GetWorldPose();
