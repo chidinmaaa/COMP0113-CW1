@@ -10,11 +10,13 @@ TagManager:
   - Head
   - Torso
   - texture
+  - avatar
+  - Pad
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - AvatarToEdit
   - Water
   - UI
   - 
