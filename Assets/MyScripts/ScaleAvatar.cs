@@ -33,7 +33,7 @@ public class ScaleAvatar : MonoBehaviour
         // Set slider default values based on the object's current scale
         SetSliderDefaults();
 
-        // Add listeners to sliders for real-time scale updates
+         //Add listeners to sliders for real-time scale updates
         object1_X_Slider.onValueChanged.AddListener(value => UpdateScale(object1, value, 'x'));
         object1_Y_Slider.onValueChanged.AddListener(value => UpdateScale(object1, value, 'y'));
         object1_Z_Slider.onValueChanged.AddListener(value => UpdateScale(object1, value, 'z'));
