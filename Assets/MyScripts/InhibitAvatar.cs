@@ -74,16 +74,21 @@ public class InhibitAvatar : MonoBehaviour
         PrefabUtility.SaveAsPrefabAssetAndConnect(editingAvatar, prefabPath, InteractionMode.UserAction);
 
         UnityEngine.Debug.Log("Prefab updated at: " + prefabPath);
+        GameObject updatedPrefab = Resources.Load<GameObject>("MyAvatars/UbiqAvatars/OurAvatar");
 
+        
         // Button Pressed - Fetch and Set Avatar Prefab
         UnityEngine.Debug.Log("Button Pressed: Attempting to Change Avatar Prefab");
 
         //GameObject newPrefab = FindPrefabInLayer();
 
-        if (editingAvatar != null)
+        if (updatedPrefab != null)
         {
-            avatarManager.avatarPrefab = editingAvatar;
-            UnityEngine.Debug.Log($"Avatar prefab set to: {editingAvatar.name}");
+            //GameObject instance = Instantiate(updatedPrefab);
+
+            //avatarManager.avatarPrefab = editingAvatar;
+            avatarManager.avatarPrefab = updatedPrefab;
+            UnityEngine.Debug.Log($"Avatar prefab set to: {updatedPrefab.name}");
         }
         else
         {
