@@ -1917,15 +1917,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e56bd22ea9a6e584ca1910fb339f1027, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 94.14
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e56bd22ea9a6e584ca1910fb339f1027, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 20.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e56bd22ea9a6e584ca1910fb339f1027, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 20.53
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e56bd22ea9a6e584ca1910fb339f1027, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3382,6 +3382,7 @@ GameObject:
   - component: {fileID: 382138454}
   - component: {fileID: 382138453}
   - component: {fileID: 382138452}
+  - component: {fileID: 382138455}
   m_Layer: 0
   m_Name: Glass_Cylinder
   m_TagString: Untagged
@@ -3480,6 +3481,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382138450}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &382138455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382138450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eeb87458e68c9c459d84b72636df686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &395478802
 GameObject:
   m_ObjectHideFlags: 0
