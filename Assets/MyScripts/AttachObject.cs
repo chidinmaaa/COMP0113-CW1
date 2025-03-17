@@ -21,6 +21,8 @@ public class AttachObject : MonoBehaviour
     private string assignedUserID;
 
     public string initialUserID; // Set in Inspector. "-1" means any user can grab it.
+    [SerializeField]
+    private bool isHead;
 
     private Vector3 lastPosition;
     private Quaternion lastRotation;
@@ -51,12 +53,12 @@ public class AttachObject : MonoBehaviour
     {
         //Debug.Log(other.gameObject.name);
 
-        if (other.gameObject.CompareTag("Head"))
+        if (other.gameObject.CompareTag("Head") && isHead)
         {
             UnityEngine.Debug.Log("collided into head");
             Renderer HeadRenderer = other.gameObject.GetComponent<Renderer>();
             HeadRenderer.material = mat;
-        } else if (other.gameObject.CompareTag("Torso"))
+        } else if (other.gameObject.CompareTag("Torso") && !isHead)
         {
             UnityEngine.Debug.Log("collided into torso");
             Renderer TorsoRenderer = other.gameObject.GetComponent<Renderer>();
