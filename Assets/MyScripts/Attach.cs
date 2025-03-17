@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Attach : MonoBehaviour
 {
-    //public LayerMask ballLayer;
-    //public int playerLayer;
+    public LayerMask accessoryLayer;
+    public int playerLayer;
 
     public string tagToAdd;
 
@@ -13,16 +13,17 @@ public class Attach : MonoBehaviour
     {
         if (other.transform.CompareTag(tagToAdd))
         {
+            UnityEngine.Debug.Log("collided correctly");
             other.transform.SetParent(transform);
-            //other.gameObject.layer = playerLayer;
+            other.gameObject.layer = playerLayer;
 
-            //RaycastHit hit;
-            //if (Physics.Raycast(other.transform.position, (transform.position - other.transform.position).normalized, out hit, Mathf.Infinity, ballLayer))
-            //{
-            //    other.transform.forward = hit.normal;
-            //    other.transform.position = hit.point;
-            //    other.transform.position = other.transform.position + (other.transform.forward * other.transform.localScale.z) * 0.5f;
-            //}
+            RaycastHit hit;
+            if (Physics.Raycast(other.transform.position, (transform.position - other.transform.position).normalized, out hit, Mathf.Infinity, accessoryLayer))
+            {
+                other.transform.forward = hit.normal;
+                other.transform.position = hit.point;
+                other.transform.position = other.transform.position + (other.transform.forward * other.transform.localScale.z) * 0.2f;
+            }
         }
     }
 }

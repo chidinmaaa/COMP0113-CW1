@@ -12,6 +12,7 @@ TagManager:
   - texture
   - avatar
   - Pad
+  - Accessory
   layers:
   - Default
   - TransparentFX
