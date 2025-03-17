@@ -61,8 +61,10 @@ public class AttachObject : MonoBehaviour
         rigidbody.linearVelocity = Vector3.zero;
         rigidbody.angularVelocity = Vector3.zero;
         rigidbody.useGravity = false;
+        
 
         transform.SetWorldPose(worldPose);
+        context.SendJson(new Message(false, transform.position, transform.rotation));
     }
 
     private void OnDestroy()
