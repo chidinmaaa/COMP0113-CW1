@@ -20,7 +20,7 @@ public class OpenDoors : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (button_A_active)  // & button B active
+        if (button_A_active & button_B_active)
         {
             foreach (Animator anim in animators)
             {
