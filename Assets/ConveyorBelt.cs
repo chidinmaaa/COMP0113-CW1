@@ -16,8 +16,8 @@ public class ConveyorBelt : MonoBehaviour
     {
         for(int i = 0; i < onBelt.Count ; i++)
         {
-            //onBelt[i].GetComponent<Rigidbody>().linearVelocity = speed * direction * Time.deltaTime * boost;
-            onBelt[i].GetComponent<Rigidbody>().position += direction/speed;
+            onBelt[i].GetComponent<Rigidbody>().linearVelocity = speed * direction * Time.deltaTime * boost;
+            //onBelt[i].GetComponent<Rigidbody>().position += direction/speed;
         }
     }
 
