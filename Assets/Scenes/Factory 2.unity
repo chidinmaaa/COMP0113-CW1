@@ -2501,6 +2501,57 @@ Transform:
   - {fileID: 64116933}
   m_Father: {fileID: 1238146215}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &285992379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 285992381}
+  - component: {fileID: 285992380}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &285992380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285992379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53c02cb8b392418b8494379bcab9416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Theme music
+    clip: {fileID: 8300000, guid: 79cc3c547d3b646aca9a7074e9765df4, type: 3}
+    volume: 0.29
+    pitch: 0.8
+    loop: 0
+    source: {fileID: 0}
+--- !u!4 &285992381
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285992379}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -26.954947, y: 2.4526093, z: 1.3606069}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &297194760 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6484619048012061601, guid: d267fc783c1e0cd4d8aa7b17494d58d0, type: 3}
@@ -19886,3 +19937,4 @@ SceneRoots:
   - {fileID: 671893007}
   - {fileID: 1466886075}
   - {fileID: 33541539}
+  - {fileID: 285992381}
