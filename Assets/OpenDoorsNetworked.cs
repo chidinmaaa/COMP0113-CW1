@@ -40,6 +40,10 @@ public class OpenDoorsNetworked : MonoBehaviour
             }
             // play a sound
             belt.UnfreezeAvatar();
+
+            my_button_active = false;
+            other_button_active = false;
+            last_button_state = my_button_active;
         }
     }
 
