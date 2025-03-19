@@ -65,9 +65,9 @@ public class AttachObject : MonoBehaviour
             TorsoRenderer.material = mat;
         }
 
+        rigidbody.useGravity = false;
         rigidbody.linearVelocity = Vector3.zero;
         rigidbody.angularVelocity = Vector3.zero;
-        rigidbody.useGravity = false;
         
 
         transform.SetWorldPose(worldPose);
@@ -102,7 +102,7 @@ public class AttachObject : MonoBehaviour
 
         // Notify the network about ownership change
         context.SendJson(new Message(true, transform.position, transform.rotation));
-        UnityEngine.Debug.Log("heyyyyy");
+        
     }
 
     private void OnRelease(SelectExitEventArgs eventArgs)

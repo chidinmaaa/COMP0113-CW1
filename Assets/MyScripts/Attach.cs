@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class Attach : MonoBehaviour
 {
-    public LayerMask accessoryLayer;
-    public int playerLayer;
+    private LayerMask accessoryLayer;
+    private int playerLayer;
 
-    public string tagToAdd;
+    private string tagToAdd;
+    [SerializeField]
+    private Vector3 position;
+    [SerializeField]
+    private Vector3 rotation;
 
     private void OnCollisionEnter(Collision other)
     {
@@ -15,20 +19,13 @@ public class Attach : MonoBehaviour
         if (other.gameObject.name == "OurAvatar")
         {
             UnityEngine.Debug.Log("collided correctly");
-            //other.transform.SetParent(transform);
-            //other.gameObject.layer = playerLayer;
 
             transform.SetParent(other.transform);
-            transform.localPosition = new Vector3(0, (float)0.53, 0);
-            //transform.rotation = Quaternion.identity;
-            transform.localEulerAngles = new Vector3(0, 0, 0);
-            //RaycastHit hit;
-            //if (Physics.Raycast(other.transform.position, (transform.position - other.transform.position).normalized, out hit, Mathf.Infinity, accessoryLayer))
-            //{
-            //    other.transform.forward = hit.normal;
-            //    other.transform.position = hit.point;
-            //    other.transform.position = other.transform.position + (other.transform.forward * other.transform.localScale.z) * 0.2f;
-            //}
+            //transform.localPosition = new Vector3(0, (float)0.53, 0);
+            transform.localPosition = position;
+            //transform.localEulerAngles = new Vector3(0, 0, 0);
+            transform.localEulerAngles = rotation;
+
         }
     }
 }
