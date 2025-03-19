@@ -891,7 +891,7 @@ GameObject:
   m_Component:
   - component: {fileID: 105840939}
   m_Layer: 0
-  m_Name: Accessibility Studio
+  m_Name: Accessiry Studio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5858,6 +5858,7 @@ GameObject:
   m_Component:
   - component: {fileID: 684778719}
   - component: {fileID: 684778720}
+  - component: {fileID: 684778721}
   m_Layer: 0
   m_Name: Door System
   m_TagString: Untagged
@@ -5891,13 +5892,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684778718}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87399e6fdd5d5174b8b12f8536127b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   button_A_active: 0
   button_B_active: 0
+--- !u!114 &684778721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684778718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 802fb1fa0176a0445823456687b91ccb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  my_button_active: 0
 --- !u!1 &697936809
 GameObject:
   m_ObjectHideFlags: 0
@@ -9701,6 +9715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1034624062}
   - component: {fileID: 1034624063}
+  - component: {fileID: 1034624064}
   m_Layer: 0
   m_Name: Door system
   m_TagString: Untagged
@@ -9734,13 +9749,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034624061}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87399e6fdd5d5174b8b12f8536127b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   button_A_active: 0
   button_B_active: 0
+--- !u!114 &1034624064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034624061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 802fb1fa0176a0445823456687b91ccb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  my_button_active: 0
 --- !u!1 &1045652801 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7594736381303323828, guid: 6a9df049b870494449b0cbacd4e19d3d, type: 3}
@@ -17701,6 +17729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1888314070}
   - component: {fileID: 1888314071}
+  - component: {fileID: 1888314072}
   m_Layer: 0
   m_Name: Door System
   m_TagString: Untagged
@@ -17734,13 +17763,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1888314069}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87399e6fdd5d5174b8b12f8536127b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   button_A_active: 0
   button_B_active: 0
+--- !u!114 &1888314072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888314069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 802fb1fa0176a0445823456687b91ccb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  my_button_active: 0
 --- !u!4 &1914387699 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7515332717815086903, guid: 65467f6b70ddf5e4890bd9f317b3a5b7, type: 3}
@@ -17890,6 +17932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1945928898}
   - component: {fileID: 1945928899}
+  - component: {fileID: 1945928900}
   m_Layer: 0
   m_Name: Door System
   m_TagString: Untagged
@@ -17923,13 +17966,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1945928897}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87399e6fdd5d5174b8b12f8536127b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   button_A_active: 0
   button_B_active: 0
+--- !u!114 &1945928900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945928897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 802fb1fa0176a0445823456687b91ccb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  my_button_active: 0
 --- !u!1 &1953813521
 GameObject:
   m_ObjectHideFlags: 0
