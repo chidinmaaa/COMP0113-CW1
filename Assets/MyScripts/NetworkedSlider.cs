@@ -29,6 +29,8 @@ public class NetworkedSlider : MonoBehaviour
 
         // Send updated value to all clients
         context.SendJson(new Message() { value = value });
+
+        UnityEngine.Debug.Log("sending new slider value");
     }
 
     private struct Message
