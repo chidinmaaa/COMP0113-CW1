@@ -26,6 +26,9 @@ public class Attach : MonoBehaviour
             //transform.localEulerAngles = new Vector3(0, 0, 0);
             transform.localEulerAngles = rotation;
 
+            Destroy(transform.Find("XRGrabInteractable"));
+            Destroy(gameObject.GetComponent<Rigidbody>());
+
         }
     }
 }

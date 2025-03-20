@@ -31,6 +31,8 @@ public class InhibitAvatar : MonoBehaviour
     private RoomClient roomClient;
     private AvatarManager avatarManager;
 
+    public bool voting_complete;
+
     private void Start()
     {
         // Get the path of the original prefab
@@ -92,8 +94,11 @@ public class InhibitAvatar : MonoBehaviour
             updatedPrefab.transform.localScale = scale;
 
             //avatarManager.avatarPrefab = editingAvatar;
-            avatarManager.avatarPrefab = updatedPrefab;
-            UnityEngine.Debug.Log($"Avatar prefab set to: {updatedPrefab.name}");
+            if (voting_complete)
+            {
+                avatarManager.avatarPrefab = updatedPrefab;
+                UnityEngine.Debug.Log($"Avatar prefab set to: {updatedPrefab.name}");
+            }
         }
         else
         {

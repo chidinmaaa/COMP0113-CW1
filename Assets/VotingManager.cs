@@ -14,34 +14,42 @@ namespace AvatarFactory
 {
     public class VotingManager : MonoBehaviour
     {
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        public int totalVotes = 0;
-        //public Dictionary<string,int> votes = new Dictionary<string,int>();
-        public Dictionary<string, int> votes = new Dictionary<string, int>();
-        private AvatarManager avatarManager;
+        private NetworkContext context;
+        private FactoryCompletionHandler completion_handler;
+
+        public bool my_vote_cast = false;
+        private bool other_vote_cast = false;
 
         void Start()
         {
-            avatarManager = gameObject.GetComponent<AvatarManager>();
-            //Dictionary<IPeer, Ubiq.Avatars.Avatar>.KeyCollection players = avatarManager.playerAvatars.Keys;
-
-            //List<string> player_ids = [];
-
-            //for (int i = 0; i < players.count; i++)
-            //    {
-            //    votes.add(players[i].ToString(), 0);
-            //    }
-            //foreach (IPeer peer in players)
-            //{
-            //    Debug.Log(peer);
-            //}
-
+            context = NetworkScene.Register(this);
+            completion_handler = GetComponentInParent<FactoryCompletionHandler>();   
         }
 
-        // Update is called once per frame
         void Update()
         {
+            if (my_vote_cast)
+            {
+                context.SendJson(new Message()
+                {
+                    vote_cast = true
+                });
+            }
+            if (my_vote_cast) // & other vote cast
+            {
+                completion_handler.voting_complete = true;
+            }
+        }
 
+        private struct Message
+        {
+            public bool vote_cast;
+        }
+
+        public void ProcessMessage(ReferenceCountedSceneGraphMessage message)
+        {
+            var m = message.FromJson<Message>();
+            other_vote_cast = m.vote_cast;
         }
     }
 }
