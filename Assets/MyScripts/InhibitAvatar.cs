@@ -17,7 +17,7 @@ using System.IO;
 /// </summary>
 public class InhibitAvatar : MonoBehaviour
 {
-    [Header("Layer Settings")]
+    //[Header("Layer Settings")]
     //[Tooltip("Layer where the avatar prefab is located")]
     //public LayerMask prefabLayer;
 
@@ -74,7 +74,7 @@ public class InhibitAvatar : MonoBehaviour
         PrefabUtility.SaveAsPrefabAssetAndConnect(editingAvatar, prefabPath, InteractionMode.UserAction);
 
         UnityEngine.Debug.Log("Prefab updated at: " + prefabPath);
-        GameObject updatedPrefab = Resources.Load<GameObject>("MyAvatars/UbiqAvatars/OurAvatar");
+        GameObject updatedPrefab = Resources.Load<GameObject>("MyAvatars/UbiqAvatars/NewAvatar");
 
         
         // Button Pressed - Fetch and Set Avatar Prefab
