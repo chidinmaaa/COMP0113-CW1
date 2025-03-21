@@ -35,7 +35,7 @@ namespace AvatarFactory
                     vote_cast = true
                 });
             }
-            if (my_vote_cast) // & other vote cast
+            if (my_vote_cast & other_vote_cast)
             {
                 completion_handler.voting_complete = true;
             }
