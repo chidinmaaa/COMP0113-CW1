@@ -6,17 +6,14 @@ using Ubiq.Spawning;
 using Ubiq.Geometry;
 
 
-public class FireworksFinalRoom : MonoBehaviour, INetworkSpawnable
+public class FireworksFinalRoom : MonoBehaviour
 {
     private Rigidbody[] fireworks;
     private ParticleSystem[] particles;
 
-    public NetworkId NetworkId { get; set; }
-
     public bool owner;  // remove
     public bool fired = false;
 
-    private NetworkContext context;
     private Vector3 flightForce;
     private float explodeTime;
 
@@ -29,7 +26,7 @@ public class FireworksFinalRoom : MonoBehaviour, INetworkSpawnable
 
     private void Start()
     {
-        context = NetworkScene.Register(this);
+        //explodeTime =  Time.time + 10.0f;
     }
 
     public void LaunchFireworks()

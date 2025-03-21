@@ -12,12 +12,12 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 namespace Ubiq.Samples
 {
-    public class Firework : MonoBehaviour, INetworkSpawnable
+    public class Firework : MonoBehaviour
     {
         private Rigidbody body;
         private ParticleSystem particles;
 
-        public NetworkId NetworkId { get; set; }
+        //public NetworkId NetworkId { get; set; }
 
         public bool owner;
         public bool fired;
