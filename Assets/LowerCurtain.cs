@@ -15,6 +15,13 @@ public class LowerCurtain : MonoBehaviour
             curtain.transform.position -= new Vector3(0, move_dist, 0);
         }
     }
+    private void OnTriggerExit(Collider collision)
+    {
+        if (collision.gameObject.tag == "avatar")
+        {
+            curtain.transform.position += new Vector3(0, move_dist, 0);
+        }
+    }
 
     void Update()
     {

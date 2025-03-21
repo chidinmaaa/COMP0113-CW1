@@ -1,0 +1,449 @@
+[33mcommit 8f049d7a6880828d4b200287d445d6f02d3c57f9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: chidinmaaa <92586177+chidinmaaa@users.noreply.github.com>
+Date:   Thu Mar 20 23:50:11 2025 +0000
+
+    final room scripts
+
+[33mcommit 7b9a8f08e4d5914378c4c481a385ad6676ea5d1e[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Thu Mar 20 20:14:48 2025 +0000
+
+    resets the avatar when restarting (still some bugs to be fixed)
+
+[33mcommit 0515c81d7a21ea9fd0d20c67e3e4f95d947817da[m
+Author: ofirfrancis <ofir.francis@gmail.com>
+Date:   Thu Mar 20 16:15:21 2025 +0000
+
+    Add accesory respwaning
+
+[33mcommit b8aedce15008a9935cafaff7e017ce0fb186dacb[m
+Author: chidinmaaa <92586177+chidinmaaa@users.noreply.github.com>
+Date:   Thu Mar 20 14:00:21 2025 +0000
+
+    audio integration pt.1
+
+[33mcommit aa53779b50b08314947d79101aeb46641a0bf138[m
+Author: RKaur13 <86778772+RKaur13@users.noreply.github.com>
+Date:   Thu Mar 20 12:39:34 2025 +0000
+
+    MySpeechController - TTS
+
+[33mcommit b96ee47dd8a79e38fd333a93dc9572792b40942e[m
+Author: ofirfrancis <ofir.francis@gmail.com>
+Date:   Wed Mar 19 19:50:49 2025 +0000
+
+    Add more accessories
+
+[33mcommit 40d18668bf2e7358cfd5a64fe4f8dc03a932f7f9[m
+Author: ofirfrancis <ofir.francis@gmail.com>
+Date:   Wed Mar 19 19:20:35 2025 +0000
+
+    Add accessories
+
+[33mcommit bede79a45f95730ae8f8866d08f3c6419ee857c1[m
+Merge: 7671993 b42a65f
+Author: chidinmaaa <92586177+chidinmaaa@users.noreply.github.com>
+Date:   Wed Mar 19 16:22:30 2025 +0000
+
+    Merge branch 'main' of https://github.com/chidinmaaa/COMP0113-CW1
+
+[33mcommit 76719936d3db4b0a93336366f44ef67dade62258[m
+Author: chidinmaaa <92586177+chidinmaaa@users.noreply.github.com>
+Date:   Wed Mar 19 16:22:15 2025 +0000
+
+    bug fixes pt.4
+
+[33mcommit b42a65fe8a2d88cdd24923419aaa1285e4508566[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Wed Mar 19 14:22:26 2025 +0000
+
+    updated
+
+[33mcommit 7511af5b6724a9b8635bba030edb005be8387f52[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Wed Mar 19 14:11:45 2025 +0000
+
+    bug fixes pt.3
+
+[33mcommit 154d742b7d65d8a85ebb975769a3cfb42080c55b[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Wed Mar 19 13:40:43 2025 +0000
+
+    added a label
+
+[33mcommit c57b4b0a0981f5948dbcfaeb505c12c3bb3b07de[m
+Author: ofirfrancis <ofir.francis@gmail.com>
+Date:   Wed Mar 19 13:33:36 2025 +0000
+
+    Attach accesory
+
+[33mcommit 1b7a50b59d52c039dc67fd16455e1af087298ca2[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Wed Mar 19 13:23:49 2025 +0000
+
+    fixed 1st room button
+
+[33mcommit 045c861b4d8b9dfa83219db9e4aca321ce6cc5cd[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Wed Mar 19 13:20:05 2025 +0000
+
+    audio manager with theme music
+
+[33mcommit 31424d8da6f3a3b724db3b6317e2ba4621fe23cc[m
+Author: chidinmaaa <92586177+chidinmaaa@users.noreply.github.com>
+Date:   Wed Mar 19 13:10:38 2025 +0000
+
+    fixed factory scene merge errors..?
+
+[33mcommit 438547be8df20580bb26a19297c62babfd8ed988[m
+Author: RKaur13 <86778772+RKaur13@users.noreply.github.com>
+Date:   Wed Mar 19 12:52:28 2025 +0000
+
+    Final Audio Manager - Working
+
+[33mcommit 16590539f37284876acb937e95f07fc5383e4c7b[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Wed Mar 19 12:36:00 2025 +0000
+
+    networked sliders
+
+[33mcommit 8ee8e64e04262a87290b7bd1be5b89af3e6a155d[m
+Author: chidinmaaa <92586177+chidinmaaa@users.noreply.github.com>
+Date:   Wed Mar 19 12:34:36 2025 +0000
+
+    bug fixes pt.2
+
+[33mcommit 001738c9ce1817756eb691ec2284e12a3be43b5a[m
+Author: RKaur13 <86778772+RKaur13@users.noreply.github.com>
+Date:   Wed Mar 19 12:27:27 2025 +0000
+
+    Audio Manager - theme song integration
+
+[33mcommit d3050e788a0d2c6b037ba6b3935391cc0d833888[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Wed Mar 19 11:27:25 2025 +0000
+
+    trying to network sliders
+
+[33mcommit 941f8ebd09f19ce5baa9ca0784aa5d029173789d[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Wed Mar 19 11:13:57 2025 +0000
+
+    added rigidbody to avatar torso
+
+[33mcommit 264e6c97482c7b1c82d6169bc925775d11745405[m
+Author: chidinmaaa <92586177+chidinmaaa@users.noreply.github.com>
+Date:   Wed Mar 19 00:09:46 2025 +0000
+
+    bug fixes pt.1
+
+[33mcommit 00f497e504b8bab93134eb9614705f834b025c91[m
+Merge: 5632651 709ca2d
+Author: ofirfrancis <ofir.francis@gmail.com>
+Date:   Mon Mar 17 19:49:17 2025 +0000
+
+    Merge branch 'main' of github.com:chidinmaaa/COMP0113-CW1
+
+[33mcommit 563265164d386856d290f843a0046c340f8a0f2e[m
+Author: ofirfrancis <ofir.francis@gmail.com>
+Date:   Mon Mar 17 19:48:54 2025 +0000
+
+    Add netweorked glass and isHead bool
+
+[33mcommit 709ca2d3a1b7682ab8dff88958b5709219d76760[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Mon Mar 17 19:40:40 2025 +0000
+
+    ears as accessories
+
+[33mcommit a0484bacbf5912354806430b366ae284b55d5cdc[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Mon Mar 17 19:19:06 2025 +0000
+
+    networked doors
+
+[33mcommit b4e31affc3eb3687b4542ab633979ac986ff0dd7[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Mon Mar 17 19:07:44 2025 +0000
+
+    networked accessory
+
+[33mcommit 7dde636e27f0294c2e0b1bb6197baa67bdd5b225[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Mon Mar 17 19:05:31 2025 +0000
+
+    should attach an example accessory but need to fix the orientation and scale
+
+[33mcommit 85c657d135e278559f2beec8cb189ebf58ea25b5[m
+Author: ofirfrancis <ofir.francis@gmail.com>
+Date:   Mon Mar 17 18:05:36 2025 +0000
+
+    Add attach object
+
+[33mcommit 7c5a926585e607d41a195eaf777de9c928da779d[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Sun Mar 16 21:06:23 2025 +0000
+
+    updates
+
+[33mcommit 90cc92b37a702ece3557e5d5511c97c0ceb582b7[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Sun Mar 16 21:01:18 2025 +0000
+
+    inhabit avatar correctly in factory
+
+[33mcommit d2810f35c7982c3be058cf19e95b336766485d27[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Sun Mar 16 20:46:16 2025 +0000
+
+    CAN INHABIT!
+
+[33mcommit c8629502cdc84ececa7991ca0cef992dc175aa9b[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Fri Mar 14 20:09:21 2025 +0000
+
+    added Network obj to the sliders
+
+[33mcommit 40ffe970ac4c1365ffaec708378473426287b3f7[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Fri Mar 14 20:07:15 2025 +0000
+
+    avatar does not move with belt and set the avatar to start in body lab
+
+[33mcommit f25acda9f560741fe2aad8fc8b3e43b971b2047b[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Thu Mar 13 17:17:03 2025 +0000
+
+    can scale torso/ head separately with sliders (need better UI)
+
+[33mcommit ee3679b1ed82d0df8b8128ceba2c07b8dcc4dbfe[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Thu Mar 13 08:33:49 2025 +0000
+
+    adding sliders to change body shape/ size
+
+[33mcommit acabd95d30bd27394aaa2d31c0cc7159466e266d[m
+Author: ofirfrancis <ofir.francis@gmail.com>
+Date:   Wed Mar 12 16:05:29 2025 +0000
+
+    Duplicate pressure pad and balls, add glass curtain
+
+[33mcommit ba9a676206c89a99745f97e52a973542a42869e5[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Wed Mar 12 15:17:29 2025 +0000
+
+    change head material at collision
+
+[33mcommit d708098b74501417025d09d25319c48535c73e6f[m
+Author: ofirfrancis <ofir.francis@gmail.com>
+Date:   Wed Mar 12 13:31:37 2025 +0000
+
+    get material from object
+
+[33mcommit 83f32aba545c44d9b59fd812e5f52dd00ab6b0d4[m
+Author: ofirfrancis <ofir.francis@gmail.com>
+Date:   Wed Mar 12 12:33:46 2025 +0000
+
+    Add pressure pad and throwables
+
+[33mcommit 8449fc380fcf4bd12873bd55be3019be89286c6c[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Tue Mar 11 20:48:09 2025 +0000
+
+    switched to using and editing UBIQ avatars
+
+[33mcommit 86b8c5fd5b7cb1defb93893ff2aa8f2fee779cab[m
+Author: chidinmaaa <92586177+chidinmaaa@users.noreply.github.com>
+Date:   Sun Mar 9 20:18:13 2025 +0000
+
+    fix merge conflicts
+
+[33mcommit 0d2c55a8d24a01c87e70de436c56c1d302cbcd13[m
+Author: chidinmaaa <92586177+chidinmaaa@users.noreply.github.com>
+Date:   Sat Mar 8 22:40:04 2025 +0000
+
+    fix
+
+[33mcommit 632987f439098670ff25e929ccb752bd52b5397b[m
+Author: chidinmaaa <92586177+chidinmaaa@users.noreply.github.com>
+Date:   Sat Mar 8 22:19:47 2025 +0000
+
+    New straight factory scene. Buttons fixed!
+
+[33mcommit fb5d71792327dbbc85faad2a88bf998e742286b6[m
+Author: ofirfrancis <ofir.francis@gmail.com>
+Date:   Wed Mar 5 17:31:44 2025 +0000
+
+    Add networked objects script
+
+[33mcommit 7548af6f0705bfd8c2dee8f79ec25b81cc3328fa[m
+Author: ofirfrancis <ofir.francis@gmail.com>
+Date:   Wed Mar 5 16:30:25 2025 +0000
+
+    Re add pressure plate and throwables
+
+[33mcommit 96a035f94c722c3521369f386438caa83fedeeb7[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Wed Mar 5 13:22:04 2025 +0000
+
+    prefab gets spawned
+
+[33mcommit d385b671a51d2c54f0c89a994d1a0e24b8c9bc60[m
+Merge: a2d2872 866b8b8
+Author: chidinmaaa <92586177+chidinmaaa@users.noreply.github.com>
+Date:   Wed Mar 5 02:08:30 2025 +0000
+
+    Merge branch 'main' of https://github.com/chidinmaaa/COMP0113-CW1
+
+[33mcommit a2d2872cdbb1ed3d2030d704305972cc321748e5[m
+Author: chidinmaaa <abbyez@icloud.com>
+Date:   Wed Mar 5 00:56:37 2025 +0000
+
+    added collaborative buttons to control doors
+
+[33mcommit 866b8b8050285a4535048aaeaf39a05a12b6c022[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Tue Mar 4 17:42:32 2025 +0000
+
+    can spawn a rocketBox avatar without material issues
+
+[33mcommit 656a312c37c1a118f40a5c43cd992f5b8255adb4[m
+Merge: e1c3194 0f3e4bd
+Author: ofirfrancis <ofir.francis@gmail.com>
+Date:   Tue Mar 4 16:39:10 2025 +0000
+
+    fix merge conflict
+
+[33mcommit e1c319452c7fba8e7eea1fcfd2075e098336bda5[m
+Author: ofirfrancis <ofir.francis@gmail.com>
+Date:   Tue Mar 4 16:34:18 2025 +0000
+
+    Add style station pressure pad and throwables
+
+[33mcommit 0f3e4bd84f955ed7267489a200fb16d1742fe696[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Tue Mar 4 15:26:27 2025 +0000
+
+    removed RocketBox avatars
+
+[33mcommit d0f7b1d4422a91eed1bf14c7f5a8f123e83609b3[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Sat Mar 1 19:48:01 2025 +0000
+
+    trying to add RocketBox
+
+[33mcommit 41b7919eb7988f9df2a280d1dabee0da81edfd80[m
+Author: chidinmaaa <abbyez@icloud.com>
+Date:   Wed Feb 26 21:04:55 2025 +0000
+
+    more work on the factory scene
+
+[33mcommit 3c9d2ff8638d1326260b024fbff1e0b0284cd48a[m
+Author: chidinmaaa <abbyez@icloud.com>
+Date:   Wed Feb 26 13:16:43 2025 +0000
+
+    scaled down factory scene
+
+[33mcommit a1ccbd888df7afe5dca510c441b8995959f14dad[m
+Author: chidinmaaa <abbyez@icloud.com>
+Date:   Wed Feb 26 12:28:23 2025 +0000
+
+    more scene modifications and ubiq interactibles added
+
+[33mcommit e8510b4445e25b70862298db785b5b6fe98e783c[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Tue Feb 25 20:40:51 2025 +0000
+
+    some updates
+
+[33mcommit a78f98d29008d3cdd0cf6b9952de62011fa35f89[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Tue Feb 25 20:29:01 2025 +0000
+
+    objects recognise their 'owners' but can still be grabbed by others
+
+[33mcommit 91f71535bc4d6aa6ac3ade158767364242a0d44c[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Tue Feb 25 19:20:10 2025 +0000
+
+    networked objects work
+
+[33mcommit 3fd8c2173e3fd717698e1d715607bc9a2cc8580c[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Tue Feb 25 13:28:36 2025 +0000
+
+    trying to add networked objects and assign IDs to users
+
+[33mcommit 152cd4795ec13a97b5e4548f50e6d83749dbc339[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Mon Feb 24 16:12:08 2025 +0000
+
+    trying to assign objects to users
+
+[33mcommit dde1ee7dac8b1929a8bc62b08444e4c5789c2421[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Mon Feb 24 11:57:16 2025 +0000
+
+    basic networked scene
+
+[33mcommit 8cefb3eb836e40f28f8264597aebb4c48f3662f4[m
+Merge: d2dcc2e 4abf88d
+Author: chidinmaaa <abbyez@icloud.com>
+Date:   Thu Feb 20 13:43:33 2025 +0000
+
+    Merge branch 'main' of https://github.com/chidinmaaa/COMP0113-CW1
+    merging my changes
+
+[33mcommit d2dcc2eee22389bb0c25517ea3d55c91d6bed20f[m
+Author: chidinmaaa <abbyez@icloud.com>
+Date:   Thu Feb 20 04:47:31 2025 +0000
+
+    simple conveyor
+
+[33mcommit 4abf88d812d4fff344d56036f34e04e8244b3041[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Thu Feb 20 11:08:07 2025 +0000
+
+    trying to add avatar manager
+
+[33mcommit 7fff4aa8d07e72f90e66f441131a5c672330917b[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Wed Feb 19 15:31:08 2025 +0000
+
+    basic attach mechanism
+
+[33mcommit db160ed49d280b642e36b44e448d329a285d8be1[m
+Author: RKaur13 <86778772+RKaur13@users.noreply.github.com>
+Date:   Tue Feb 18 16:22:34 2025 +0000
+
+    Factory rooms created
+
+[33mcommit e54af6f74985d2ad15db3b8625845e5994e316e9[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Wed Feb 12 17:09:52 2025 +0000
+
+    created new empty scene (Factory) where we can build out factory
+
+[33mcommit cfbe6716eb9ae0d17815a7975bb553afbb356785[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Wed Feb 12 17:03:27 2025 +0000
+
+    added avatar example from the lab
+
+[33mcommit 5dbe663649ed86517d2ae3c38159f762c0848e67[m
+Author: Gauri Desai <91729688+GauriDesai11@users.noreply.github.com>
+Date:   Wed Feb 12 17:01:09 2025 +0000
+
+    basic update (hope this does not break anything)
+
+[33mcommit 4ba9cfb53eb6ab9c8418fa3789d96ba3c1f9add3[m
+Author: sprakash <sprakash@Polar.cs.ucl.ac.uk>
+Date:   Wed Feb 5 13:51:20 2025 +0000
+
+    trying to add the demo scene of the 3d pen
+
+[33mcommit c9d393fa1d0692c2797567cdada1834701bfd367[m
+Author: chidinmaaa <92586177+chidinmaaa@users.noreply.github.com>
+Date:   Wed Feb 5 12:44:50 2025 +0000
+
+    Initial commit
