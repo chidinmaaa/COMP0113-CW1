@@ -95,7 +95,7 @@ public class ScaleAvatar : MonoBehaviour
             torso.localScale = newScale;
         }
 
-        context.SendJson(new Message() { objID = obj_id, val = value, ax = axis });
+        context.SendJson(new Message(obj_id, value, axis));
 
         UnityEngine.Debug.Log("sending scaled avatar");
     }
@@ -105,6 +105,13 @@ public class ScaleAvatar : MonoBehaviour
         public float objID;
         public float val;
         public char ax;
+
+        public Message(float objID, float val, char ax)
+        {
+            this.objID = objID;
+            this.val = val;
+            this.ax = ax;
+        }
     }
 
     public void ProcessMessage(ReferenceCountedSceneGraphMessage message)
