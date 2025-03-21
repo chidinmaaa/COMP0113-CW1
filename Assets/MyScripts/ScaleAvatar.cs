@@ -27,6 +27,8 @@ public class ScaleAvatar : MonoBehaviour
 
     private void Start()
     {
+        context = NetworkScene.Register(this);
+
         // Ensure objects exist
         if (head == null || torso == null)
         {
