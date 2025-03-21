@@ -31,10 +31,10 @@ public class FireworksFinalRoom : MonoBehaviour
 
     public void LaunchFireworks()
     {
-        flightForce = new Vector3(
-            x: (Random.value - 0.5f) * 0.05f,
-            y: 3.0f,
-            z: (Random.value - 0.5f) * 0.05f);
+        //flightForce = new Vector3(
+        //    x: (Random.value - 0.5f) * 0.05f,
+        //    y: 3.0f,
+        //    z: (Random.value - 0.5f) * 0.05f);
         explodeTime = Time.time + 500.0f;
     }
 

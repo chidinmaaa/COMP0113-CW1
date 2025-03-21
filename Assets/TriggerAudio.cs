@@ -25,6 +25,7 @@ public class TriggerAudio : MonoBehaviour
 
         if (collision.gameObject.tag == "avatar")
         {
+            Debug.Log("COLLIDED with " + transform.name);
             narration_handler.GetType().GetProperty(flag).SetValue(narration_handler, true);
         }
     }
