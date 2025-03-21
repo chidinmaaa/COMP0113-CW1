@@ -35,7 +35,7 @@ public class FireworksFinalRoom : MonoBehaviour
             x: (Random.value - 0.5f) * 0.05f,
             y: 3.0f,
             z: (Random.value - 0.5f) * 0.05f);
-        explodeTime = Time.time + 10.0f;
+        explodeTime = Time.time + 500.0f;
     }
 
     private void FixedUpdate()
