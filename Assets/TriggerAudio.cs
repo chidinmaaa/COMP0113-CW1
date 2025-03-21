@@ -2,31 +2,43 @@ using UnityEngine;
 
 public class TriggerAudio : MonoBehaviour
 {
-    public GameObject narration_handler;
-    //public var flag;
+    public NarrationHandler narration_handler;
 
-    void Start()
-    {
-        //flag = gameObject.name;
+    void Start(){
+        narration_handler = GetComponentInParent<NarrationHandler>();
     }
 
     void Update()
-    {
-
-    }
+    {}
 
     private void OnTriggerEnter(Collider collision)
     {
-        var flag = gameObject.name;
-        //if (collision.gameObject.tag == "avatar")
-        //{
-        //    narration_handler.flag = true;
-        //}
-
         if (collision.gameObject.tag == "avatar")
         {
-            Debug.Log("COLLIDED with " + transform.name);
-            narration_handler.GetType().GetProperty(flag).SetValue(narration_handler, true);
+            var flag = transform.name;
+            Debug.Log("COLLIDED with " + flag);
+            //narration_handler.GetType().GetProperty(flag).SetValue(narration_handler, true);
+            switch (flag)
+            {
+                case "in_entrance":
+                    narration_handler.in_entrance = true;
+                    break;
+                case "in_body_lab":
+                    narration_handler.in_body_lab = true;
+                    break;
+                case "in_style_station":
+                    narration_handler.in_style_station = true;
+                    break;
+                case "in_accessory_studio":
+                    narration_handler.in_accessory_studio = true;
+                    break;
+                case "in_final_room":
+                    narration_handler.in_final_room = true;
+                    break;
+                case "on_conveyor":
+                    narration_handler.on_conveyor = true;
+                    break;
+            }
         }
     }
 }
