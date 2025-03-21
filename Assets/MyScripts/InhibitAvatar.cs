@@ -78,7 +78,17 @@ public class InhibitAvatar : MonoBehaviour
         UnityEngine.Debug.Log("Prefab updated at: " + prefabPath);
         GameObject updatedPrefab = Resources.Load<GameObject>("MyAvatars/UbiqAvatars/NewAvatar");
 
-        
+        // enable script to ensure it can be inhabited
+        Ubiq.Avatars.Avatar avatarScript = updatedPrefab.GetComponent<Ubiq.Avatars.Avatar>();
+        // Enable the script
+        if (avatarScript != null)
+            avatarScript.enabled = true;
+        Ubiq.HeadAndHandsAvatar HeadAndHandsAvatarScript = updatedPrefab.GetComponent<Ubiq.HeadAndHandsAvatar>();
+        // Enable the script
+        if (HeadAndHandsAvatarScript != null)
+            HeadAndHandsAvatarScript.enabled = true;
+
+
         // Button Pressed - Fetch and Set Avatar Prefab
         UnityEngine.Debug.Log("Button Pressed: Attempting to Change Avatar Prefab");
 

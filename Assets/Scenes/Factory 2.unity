@@ -3990,9 +3990,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: OurAvatar
       objectReference: {fileID: 0}
+    - target: {fileID: 2352567967603701092, guid: f4baea5613403a64b92c613c8670e0ca, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3798215856063863946, guid: f4baea5613403a64b92c613c8670e0ca, type: 3}
       propertyPath: m_Height
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363636761321015061, guid: f4baea5613403a64b92c613c8670e0ca, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
