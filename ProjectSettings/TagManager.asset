@@ -13,6 +13,7 @@ TagManager:
   - avatar
   - Pad
   - Accessory
+  - bot
   layers:
   - Default
   - TransparentFX

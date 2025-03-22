@@ -32,7 +32,7 @@ public class OpenDoorsNetworked : MonoBehaviour
             last_button_state = my_button_active;
         }
        
-        if (my_button_active & other_button_active)
+        if (my_button_active) //  & other_button_active
         {
             foreach (Animator anim in animators)
             {
