@@ -10,7 +10,7 @@ public class SpawnBot : MonoBehaviour
     void Start()
     {
         num_bots = bots.Length;
-        InvokeRepeating("Spawn", 3.0f, 3.0f);
+        InvokeRepeating("Spawn", 3.0f, 5.0f);
     }
 
     void Update()
