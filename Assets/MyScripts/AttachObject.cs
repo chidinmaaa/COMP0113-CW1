@@ -42,7 +42,7 @@ public class AttachObject : MonoBehaviour
         interactable.selectEntered.AddListener(OnGrab);
         interactable.selectExited.AddListener(OnRelease);
         Renderer renderer = GetComponent<Renderer>();
-        mat = renderer.material;
+        mat = renderer.sharedMaterial;
         rigidbody = gameObject.GetComponent<Rigidbody>();
         worldPose = transform.GetWorldPose();
 
@@ -57,12 +57,12 @@ public class AttachObject : MonoBehaviour
         {
             UnityEngine.Debug.Log("collided into head");
             Renderer HeadRenderer = other.gameObject.GetComponent<Renderer>();
-            HeadRenderer.material = mat;
+            HeadRenderer.sharedMaterial = mat;
         } else if (other.gameObject.CompareTag("Torso") && !isHead)
         {
             UnityEngine.Debug.Log("collided into torso");
             Renderer TorsoRenderer = other.gameObject.GetComponent<Renderer>();
-            TorsoRenderer.material = mat;
+            TorsoRenderer.sharedMaterial = mat;
         }
 
         rigidbody.useGravity = false;

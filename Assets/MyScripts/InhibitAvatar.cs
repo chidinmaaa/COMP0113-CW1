@@ -104,6 +104,7 @@ public class InhibitAvatar : MonoBehaviour
             updatedPrefab.transform.localScale = scale;
 
             //avatarManager.avatarPrefab = editingAvatar;
+          
             if (voting_complete)
             {
                 avatarManager.avatarPrefab = updatedPrefab;
