@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class Attach : MonoBehaviour
 {
@@ -16,6 +18,8 @@ public class Attach : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         UnityEngine.Debug.Log(other.gameObject.name);
+        // OurAvatar, Floating_Head, Floating_Torso_A
+
         if (other.gameObject.name == "OurAvatar")
         {
             UnityEngine.Debug.Log("collided correctly");
@@ -26,7 +30,28 @@ public class Attach : MonoBehaviour
             //transform.localEulerAngles = new Vector3(0, 0, 0);
             transform.localEulerAngles = rotation;
 
-            Destroy(transform.Find("XRGrabInteractable"));
+            Transform bodyOfAvatar = other.gameObject.transform.Find("Body");
+
+            if (bodyOfAvatar != null)
+            {
+                Transform headOfAvatar = bodyOfAvatar.Find("Floating_Head");
+                if (headOfAvatar != null)
+                {
+                    transform.SetParent(headOfAvatar);
+                }
+                else
+                {
+                    UnityEngine.Debug.Log("Could not find head of the avatar");
+                }
+            
+            }
+            else
+            {
+                UnityEngine.Debug.Log("Could not find body of the avatar");
+            }
+
+            //Destroy(transform.Find("XRGrabInteractable"));
+            Destroy(GetComponent<XRGrabInteractable>());
             Destroy(gameObject.GetComponent<Rigidbody>());
 
         }
