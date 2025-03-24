@@ -60,9 +60,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 492868810450931140, guid: f4baea5613403a64b92c613c8670e0ca, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2001600152500657812, guid: f4baea5613403a64b92c613c8670e0ca, type: 3}
       propertyPath: m_Name
-      value: OurAvatar (1) Variant
+      value: bot
       objectReference: {fileID: 0}
     - target: {fileID: 2001600152500657812, guid: f4baea5613403a64b92c613c8670e0ca, type: 3}
       propertyPath: m_TagString
