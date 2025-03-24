@@ -14,9 +14,11 @@ public class Checkpoint : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider collision){
-        avatar = collision.gameObject;
-        avatar.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
-        avatar.GetComponent<Rigidbody>().freezeRotation = true;
+        if (collision.gameObject.tag == "avatar"){
+            avatar = collision.gameObject;
+            avatar.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
+            avatar.GetComponent<Rigidbody>().freezeRotation = true;
+        }
 
     }
 }
