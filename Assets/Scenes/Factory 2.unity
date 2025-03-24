@@ -3633,7 +3633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a67627f861b784d86d5cadc82efe68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedUserID: User_2
+  assignedUserID: 
   position: {x: 0, y: 0.53, z: 0}
   rotation: {x: 0, y: 0, z: 0}
 --- !u!1001 &219687202
@@ -7558,7 +7558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a67627f861b784d86d5cadc82efe68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedUserID: User_2
+  assignedUserID: 
   position: {x: 0, y: -0.12, z: -0.3}
   rotation: {x: 0, y: 0, z: 0}
 --- !u!1 &463371407
@@ -31301,7 +31301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a67627f861b784d86d5cadc82efe68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedUserID: User_1
+  assignedUserID: 
   position: {x: 0, y: -0.12, z: -0.3}
   rotation: {x: 0, y: 0, z: 0}
 --- !u!1001 &1564032838
@@ -36310,7 +36310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a67627f861b784d86d5cadc82efe68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedUserID: User_2
+  assignedUserID: 
   position: {x: 0, y: 0.684, z: 0}
   rotation: {x: 0, y: 0, z: 0}
 --- !u!1 &1772504042
@@ -36977,7 +36977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a67627f861b784d86d5cadc82efe68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedUserID: User_2
+  assignedUserID: 
   position: {x: 0, y: 0.45, z: 0}
   rotation: {x: 0, y: 0, z: 0}
 --- !u!1 &1809521144 stripped
@@ -37800,7 +37800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a67627f861b784d86d5cadc82efe68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedUserID: User_1
+  assignedUserID: 
   position: {x: 0, y: 0.45, z: -0.1}
   rotation: {x: 0, y: 0, z: 0}
 --- !u!1 &1854208499
