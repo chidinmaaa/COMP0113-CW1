@@ -15,15 +15,13 @@ public class SimpleSpeechController : MonoBehaviour
         "Find those buttons and let's get this avatar party started!"
     };
 
-    private string[] _beltChunks = new string[]{
+    private string[] _beltAndBodyLabChunks = new string[]{
         "See that cool conveyor belt?",
         "It's carrying your avatar-in-progress through each creative zone!",
         "At the end of each room, you'll spot two buttons that light up when you approach.",
         "Both of you need to press them at the same time to open the door to the next challenge.",
         "It's all about agreeing when your creation is ready to move forward.",
-        "No solo button-pressing here—this is a team effort all the way!"
-    };
-    private string[] _bodyLabChunks = new string[]{
+        "No solo button-pressing here—this is a team effort all the way!",
         "You made it to the second room!",
         "Welcome to the Body Lab!",
         "See those cool sliders on the wall?",
@@ -77,13 +75,10 @@ public class SimpleSpeechController : MonoBehaviour
         switch(room)
         {
             case "entrance":
-                StartCoroutine(SpeakChunksSequentially(_welcomeChunks, pause));
+                StartCoroutine(SpeakChunksSequentially(_welcomeChunks, 10.0f));
                 break;
             case "belt":
-                StartCoroutine(SpeakChunksSequentially(_beltChunks, pause));
-                break;
-            case "body_lab":
-                StartCoroutine(SpeakChunksSequentially(_bodyLabChunks, pause));
+                StartCoroutine(SpeakChunksSequentially(_beltAndBodyLabChunks, pause));
                 break;
             case "style_station":
                 StartCoroutine(SpeakChunksSequentially(_styleStationChunks, pause));
@@ -104,7 +99,7 @@ public class SimpleSpeechController : MonoBehaviour
             //Debug.Log($"Speaking chunk {i+1}/{chunks.Length}: {chunks[i]}");
             
             // Speak the current chunk
-            _ttsSpeaker.Speak(chunks[i]);
+            _ttsSpeaker.SpeakQueued(chunks[i]);
             
             // Wait a moment to let the system start processing
             yield return new WaitForSeconds(0.5f);

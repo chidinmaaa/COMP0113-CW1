@@ -26,7 +26,7 @@ public class NarrationHandler : MonoBehaviour
             in_entrance = false;
         }
         if (in_body_lab){
-            controller.Speak("body_lab", pause);
+            //controller.Speak("body_lab", pause);
             in_body_lab = false;
         }
         if (in_style_station){ 
