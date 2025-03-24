@@ -39,7 +39,7 @@ public class ScaleAvatar : MonoBehaviour
         // Set slider default values based on the object's current scale
         SetSliderDefaults();
 
-         //Add listeners to sliders for real-time scale updates
+        //Add listeners to sliders for real-time scale updates --> Head: object ID = 1; Torso: object ID = 2
         object1_X_Slider.onValueChanged.AddListener(value => UpdateScale(1, value, 'x'));
         object1_Y_Slider.onValueChanged.AddListener(value => UpdateScale(1, value, 'y'));
         object1_Z_Slider.onValueChanged.AddListener(value => UpdateScale(1, value, 'z'));
@@ -87,7 +87,6 @@ public class ScaleAvatar : MonoBehaviour
                     break;
             }
 
-        //obj.localScale = newScale;
         if (obj_id == 1)
         {
             head.localScale = newScale;
@@ -97,9 +96,8 @@ public class ScaleAvatar : MonoBehaviour
             torso.localScale = newScale;
         }
 
+        // Update the scale of the remote avatar
         context.SendJson(new Message(obj_id, value, axis));
-
-        UnityEngine.Debug.Log("sending scaled avatar");
     }
 
     private struct Message
@@ -151,7 +149,6 @@ public class ScaleAvatar : MonoBehaviour
                 break;
         }
 
-        //obj.localScale = newScale;
         if (obj_id == 1)
         {
             head.localScale = newScale;

@@ -12,15 +12,11 @@ using System.IO;
 
 /// <summary>
 /// This class listens to the select event of an XRI interactable button. 
-/// When pressed, it fetches a prefab from a specified layer and sets it as 
+/// When pressed, it fetches the specified prefab and sets it as 
 /// the Avatar Prefab in AvatarManager.
 /// </summary>
 public class InhibitAvatar : MonoBehaviour
 {
-    //[Header("Layer Settings")]
-    //[Tooltip("Layer where the avatar prefab is located")]
-    //public LayerMask prefabLayer;
-
     public GameObject editingAvatar;
     [Header("Original Prefab Reference")]
     public GameObject prefabReference; // Assign the original prefab
@@ -75,42 +71,30 @@ public class InhibitAvatar : MonoBehaviour
         // Apply changes from the current scene object to the prefab
         PrefabUtility.SaveAsPrefabAssetAndConnect(editingAvatar, prefabPath, InteractionMode.UserAction);
 
-        UnityEngine.Debug.Log("Prefab updated at: " + prefabPath);
         GameObject updatedPrefab = Resources.Load<GameObject>("MyAvatars/UbiqAvatars/NewAvatar");
 
         // enable script to ensure it can be inhabited
-        Ubiq.Avatars.Avatar avatarScript = updatedPrefab.GetComponent<Ubiq.Avatars.Avatar>();
-        // Enable the script
-        if (avatarScript != null)
-            avatarScript.enabled = true;
+        //Ubiq.Avatars.Avatar avatarScript = updatedPrefab.GetComponent<Ubiq.Avatars.Avatar>();
+        //// Enable the script
+        //if (avatarScript != null)
+        //    avatarScript.enabled = true;
+        
         Ubiq.HeadAndHandsAvatar HeadAndHandsAvatarScript = updatedPrefab.GetComponent<Ubiq.HeadAndHandsAvatar>();
         // Enable the script
         if (HeadAndHandsAvatarScript != null)
             HeadAndHandsAvatarScript.enabled = true;
 
-
-        // Button Pressed - Fetch and Set Avatar Prefab
-        UnityEngine.Debug.Log("Button Pressed: Attempting to Change Avatar Prefab");
-
-        //GameObject newPrefab = FindPrefabInLayer();
-
         if (updatedPrefab != null)
         {
-            //GameObject instance = Instantiate(updatedPrefab);
             Vector3 scale = updatedPrefab.transform.localScale;
             scale.x = 1;
             scale.y = 1;
             scale.z = 1;
             updatedPrefab.transform.localScale = scale;
 
-            //avatarManager.avatarPrefab = editingAvatar;
-            // TEMPORARY
-            //avatarManager.avatarPrefab = updatedPrefab;
-            // TEMPORARY
             if (voting_complete)
             {
                 avatarManager.avatarPrefab = updatedPrefab;
-                UnityEngine.Debug.Log($"Avatar prefab set to: {updatedPrefab.name}");
             }
         }
         else
@@ -118,19 +102,4 @@ public class InhibitAvatar : MonoBehaviour
             UnityEngine.Debug.LogWarning("ChangeAvatarPrefab: No prefab found");
         }
     }
-
-    //private GameObject FindPrefabInLayer()
-    //{
-    //    GameObject[] objects = GameObject.FindObjectsOfType<GameObject>();
-
-    //    foreach (GameObject obj in objects)
-    //    {
-    //        if (((1 << obj.layer) & prefabLayer.value) != 0)
-    //        {
-    //            return obj; // Return the first prefab found in the specified layer
-    //        }
-    //    }
-
-    //    return null;
-    //}
 }
