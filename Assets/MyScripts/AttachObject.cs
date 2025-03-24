@@ -74,12 +74,14 @@ public class AttachObject : MonoBehaviour
 
         transform.SetWorldPose(worldPose);
 
-        if (assignedUserID == currentUserID)
-        {
-            UnityEngine.Debug.Log("this is " + assignedUserID);
-            context.SendJson(new Message(false, transform.position, transform.rotation));
-        }
-        
+        //if (assignedUserID == currentUserID)
+        //{
+        //    UnityEngine.Debug.Log("this is " + assignedUserID);
+        //    context.SendJson(new Message(false, transform.position, transform.rotation));
+        //}
+
+        context.SendJson(new Message(false, transform.position, transform.rotation));
+
     }
 
     private void OnDestroy()
@@ -95,13 +97,13 @@ public class AttachObject : MonoBehaviour
             lastPosition = transform.position;
             lastRotation = transform.rotation;
 
-            if (assignedUserID == currentUserID)
-            {
-                UnityEngine.Debug.Log("this is " + assignedUserID);
-                context.SendJson(new Message(true, lastPosition, lastRotation));
-            }
+            //if (assignedUserID == currentUserID)
+            //{
+            //    UnityEngine.Debug.Log("this is " + assignedUserID);
+            //    context.SendJson(new Message(true, lastPosition, lastRotation));
+            //}
 
-            
+            context.SendJson(new Message(true, lastPosition, lastRotation));
         }
     }
 
@@ -109,14 +111,14 @@ public class AttachObject : MonoBehaviour
     {
         isHeld = true;
 
-        if (assignedUserID == currentUserID)
-        {
-            UnityEngine.Debug.Log("this is " + assignedUserID);
-            context.SendJson(new Message(true, transform.position, transform.rotation));
-        }
+        //if (assignedUserID == currentUserID)
+        //{
+        //    UnityEngine.Debug.Log("this is " + assignedUserID);
+        //    context.SendJson(new Message(true, transform.position, transform.rotation));
+        //}
 
-        
-        
+        context.SendJson(new Message(true, transform.position, transform.rotation));
+
     }
 
     private void OnRelease(SelectExitEventArgs eventArgs)
@@ -124,13 +126,13 @@ public class AttachObject : MonoBehaviour
         isHeld = false;
 
         // Notify network that this player released the object
-        if (assignedUserID == currentUserID)
-        {
-            UnityEngine.Debug.Log("this is " + assignedUserID);
-            context.SendJson(new Message(false, lastPosition, lastRotation));
-        }
+        //if (assignedUserID == currentUserID)
+        //{
+        //    UnityEngine.Debug.Log("this is " + assignedUserID);
+        //    context.SendJson(new Message(false, lastPosition, lastRotation));
+        //}
 
-        
+        context.SendJson(new Message(false, lastPosition, lastRotation));
     }
 
     public void ProcessMessage(ReferenceCountedSceneGraphMessage message)
