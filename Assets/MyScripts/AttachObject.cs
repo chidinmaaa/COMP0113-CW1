@@ -18,9 +18,9 @@ public class AttachObject : MonoBehaviour
     private RoomClient roomClient;
     private bool isHeld = false;
     //private bool owner = false;
-    private string assignedUserID;
+    private string currentUserID;
 
-    public string initialUserID; // Set in Inspector. "-1" means any user can grab it.
+    public string assignedUserID; // Set in Inspector. "-1" means any user can grab it.
     [SerializeField]
     private bool isHead;
 
@@ -36,7 +36,7 @@ public class AttachObject : MonoBehaviour
         context = NetworkScene.Register(this);
         interactable = GetComponent<XRGrabInteractable>();
         roomClient = RoomClient.Find(this);
-        assignedUserID = initialUserID;
+        //assignedUserID = initialUserID;
 
 
         interactable.selectEntered.AddListener(OnGrab);
@@ -46,6 +46,8 @@ public class AttachObject : MonoBehaviour
         rigidbody = gameObject.GetComponent<Rigidbody>();
         worldPose = transform.GetWorldPose();
 
+        currentUserID = UserIDManager.Instance.GetUserID(roomClient.Me.uuid);
+        UnityEngine.Debug.Log("curren user id " + currentUserID);
 
     }
 
@@ -71,7 +73,13 @@ public class AttachObject : MonoBehaviour
         
 
         transform.SetWorldPose(worldPose);
-        context.SendJson(new Message(false, transform.position, transform.rotation));
+
+        if (assignedUserID == currentUserID)
+        {
+            UnityEngine.Debug.Log("this is " + assignedUserID);
+            context.SendJson(new Message(false, transform.position, transform.rotation));
+        }
+        
     }
 
     private void OnDestroy()
@@ -82,26 +90,32 @@ public class AttachObject : MonoBehaviour
 
     private void Update()
     {
-
-
         if (isHeld && (transform.position != lastPosition || transform.rotation != lastRotation))
         {
             lastPosition = transform.position;
             lastRotation = transform.rotation;
 
-            context.SendJson(new Message(true, lastPosition, lastRotation));
+            if (assignedUserID == currentUserID)
+            {
+                UnityEngine.Debug.Log("this is " + assignedUserID);
+                context.SendJson(new Message(true, lastPosition, lastRotation));
+            }
+
+            
         }
     }
 
     private void OnGrab(SelectEnterEventArgs eventArgs)
     {
-
-
-
         isHeld = true;
 
-        // Notify the network about ownership change
-        context.SendJson(new Message(true, transform.position, transform.rotation));
+        if (assignedUserID == currentUserID)
+        {
+            UnityEngine.Debug.Log("this is " + assignedUserID);
+            context.SendJson(new Message(true, transform.position, transform.rotation));
+        }
+
+        
         
     }
 
@@ -110,18 +124,22 @@ public class AttachObject : MonoBehaviour
         isHeld = false;
 
         // Notify network that this player released the object
+        if (assignedUserID == currentUserID)
+        {
+            UnityEngine.Debug.Log("this is " + assignedUserID);
+            context.SendJson(new Message(false, lastPosition, lastRotation));
+        }
 
-        context.SendJson(new Message(false, lastPosition, lastRotation));
+        
     }
 
     public void ProcessMessage(ReferenceCountedSceneGraphMessage message)
     {
         var data = message.FromJson<Message>();
 
-
-            isHeld = data.held;
-            transform.position = data.position;
-            transform.rotation = data.rotation;
+        isHeld = data.held;
+        transform.position = data.position;
+        transform.rotation = data.rotation;
 
     }
 
