@@ -2899,7 +2899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialUserID: 
-  isHead: 1
+  isHead: 0
 --- !u!1001 &201037841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3183,7 +3183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialUserID: 
-  isHead: 0
+  isHead: 1
 --- !u!1 &210280801
 GameObject:
   m_ObjectHideFlags: 0
@@ -16159,7 +16159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialUserID: 
-  isHead: 0
+  isHead: 1
 --- !u!1 &701806895
 GameObject:
   m_ObjectHideFlags: 0
@@ -16489,7 +16489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialUserID: 
-  isHead: 0
+  isHead: 1
 --- !u!1001 &703167779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17891,7 +17891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialUserID: 
-  isHead: 1
+  isHead: 0
 --- !u!1 &820121193 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9175552907236278165, guid: 6a9df049b870494449b0cbacd4e19d3d, type: 3}
@@ -18113,7 +18113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialUserID: 
-  isHead: 1
+  isHead: 0
 --- !u!1001 &837404640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18691,7 +18691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialUserID: 
-  isHead: 0
+  isHead: 1
 --- !u!1001 &872817316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19341,6 +19341,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.0005
       objectReference: {fileID: 0}
+    - target: {fileID: -8038603652106302899, guid: 6a9df049b870494449b0cbacd4e19d3d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9e41b9ee8ccc5be40b2a208e233034eb, type: 2}
     - target: {fileID: -7643045387463572706, guid: 6a9df049b870494449b0cbacd4e19d3d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -19409,6 +19413,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.0005
       objectReference: {fileID: 0}
+    - target: {fileID: -2333234830235797359, guid: 6a9df049b870494449b0cbacd4e19d3d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9015f090bf7c5c24082516c3104e979c, type: 2}
     - target: {fileID: -81268554108406926, guid: 6a9df049b870494449b0cbacd4e19d3d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -20105,7 +20113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialUserID: 
-  isHead: 1
+  isHead: 0
 --- !u!1 &981230886
 GameObject:
   m_ObjectHideFlags: 0
@@ -21550,7 +21558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialUserID: 
-  isHead: 0
+  isHead: 1
 --- !u!1 &1046368159
 GameObject:
   m_ObjectHideFlags: 0
@@ -21895,7 +21903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialUserID: 
-  isHead: 0
+  isHead: 1
 --- !u!1 &1050913695
 GameObject:
   m_ObjectHideFlags: 0
@@ -23499,7 +23507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialUserID: 
-  isHead: 0
+  isHead: 1
 --- !u!1001 &1159003675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24139,7 +24147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialUserID: 
-  isHead: 1
+  isHead: 0
 --- !u!1 &1191796523
 GameObject:
   m_ObjectHideFlags: 0
@@ -28071,7 +28079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialUserID: 
-  isHead: 1
+  isHead: 0
 --- !u!1001 &1384247144
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28909,7 +28917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialUserID: 
-  isHead: 0
+  isHead: 1
 --- !u!1001 &1427654855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31730,6 +31738,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.0005
       objectReference: {fileID: 0}
+    - target: {fileID: -8038603652106302899, guid: 6a9df049b870494449b0cbacd4e19d3d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9015f090bf7c5c24082516c3104e979c, type: 2}
     - target: {fileID: -7643045387463572706, guid: 6a9df049b870494449b0cbacd4e19d3d, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.0002
@@ -31778,6 +31790,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.0005
       objectReference: {fileID: 0}
+    - target: {fileID: -2333234830235797359, guid: 6a9df049b870494449b0cbacd4e19d3d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9e41b9ee8ccc5be40b2a208e233034eb, type: 2}
     - target: {fileID: -81268554108406926, guid: 6a9df049b870494449b0cbacd4e19d3d, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.0002
@@ -36516,7 +36532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialUserID: 
-  isHead: 1
+  isHead: 0
 --- !u!1 &1834036441
 GameObject:
   m_ObjectHideFlags: 0
@@ -39434,7 +39450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialUserID: 
-  isHead: 1
+  isHead: 0
 --- !u!1001 &2049966696
 PrefabInstance:
   m_ObjectHideFlags: 0
