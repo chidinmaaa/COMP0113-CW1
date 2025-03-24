@@ -1,6 +1,8 @@
 using System.Linq;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class Respawn_Accessories : MonoBehaviour
 {
@@ -33,6 +35,17 @@ public class Respawn_Accessories : MonoBehaviour
             {
                 obj.transform.SetParent(null);
                 obj.transform.SetWorldPose(originalPositions[i]);
+
+                if (obj.GetComponent<Rigidbody>() == null)
+                {
+                    Rigidbody rb = obj.AddComponent<Rigidbody>();
+                    rb.useGravity = false;
+                }
+
+                if (obj.GetComponent<XRGrabInteractable>() == null)
+                {
+                    obj.AddComponent<XRGrabInteractable>();
+                }
 
             }
         }
