@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Ubiq.Messaging;
@@ -14,6 +15,7 @@ public class ChangeMaterial : MonoBehaviour
     private NetworkContext context;
     private Rigidbody rb;
     private Renderer sphereRenderer;
+    public bool isHead;
 
     // Store initial pose so we can reset
     private Vector3 startPosition;
@@ -33,13 +35,13 @@ public class ChangeMaterial : MonoBehaviour
         startRotation = transform.rotation;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         // If we collide with something tagged "Head"
-        if (collision.gameObject.CompareTag("Head"))
+        if (other.gameObject.CompareTag("Head") && isHead)
         {
             UnityEngine.Debug.Log("Collided with Head");
-            Renderer headRenderer = collision.gameObject.GetComponent<Renderer>();
+            Renderer headRenderer = other.gameObject.GetComponent<Renderer>();
             if (headRenderer != null)
             {
                 // Transfer sphere's sharedMaterial to the head object
@@ -47,10 +49,10 @@ public class ChangeMaterial : MonoBehaviour
             }
         }
         // If we collide with something tagged "Torso"
-        else if (collision.gameObject.CompareTag("Torso"))
+        else if (other.gameObject.CompareTag("Torso") && !isHead)
         {
             UnityEngine.Debug.Log("Collided with Torso");
-            Renderer torsoRenderer = collision.gameObject.GetComponent<Renderer>();
+            Renderer torsoRenderer = other.gameObject.GetComponent<Renderer>();
             if (torsoRenderer != null)
             {
                 // Transfer sphere's sharedMaterial to the torso object
