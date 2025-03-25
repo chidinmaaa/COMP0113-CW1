@@ -18,10 +18,6 @@ public class SimpleSpeechController : MonoBehaviour
     private string[] _beltAndBodyLabChunks = new string[]{
         "See that cool conveyor belt?",
         "It's carrying your avatar-in-progress through each creative zone!",
-        "At the end of each room, you'll spot two buttons that light up when you approach.",
-        "Both of you need to press them at the same time to open the door to the next challenge.",
-        "It's all about agreeing when your creation is ready to move forward.",
-        "No solo button-pressing here—this is a team effort all the way!",
         "You made it to the second room!",
         "Welcome to the Body Lab!",
         "See those cool sliders on the wall?",
@@ -39,7 +35,7 @@ public class SimpleSpeechController : MonoBehaviour
     };
     private string[] _accessoryStudioChunks = new string[]{
         "Accessories time!",
-        "This room is packed with fun add-ons for your avatar—hats, glasses, scarves, you name it!",
+        "This room is packed with fun add-ons for your avatar—hats, hair, bags, you name it!",
         "Take turns picking out accessories and placing them on your creation.",
         "Some might be in hard-to-reach spots, so you'll need to help each other out.",
         "Can you grab that crown while I hold this platform?",
@@ -50,9 +46,8 @@ public class SimpleSpeechController : MonoBehaviour
         "Final room—decision time!",
         "Your amazing avatar is almost ready for action!",
         "Take a good look at your collaborative masterpiece and decide if you're both happy with it.",
-        "Each of you gets to vote using the special voting stations.",
-        "If you both give it a thumbs up, one of you gets to jump in and become the avatar!",
-        "Watch for the celebratory confetti explosion—you've earned it!",
+        "Each of you gets to vote using the special voting station.",
+        "If you both give it a thumbs up, you gets to jump in and become the avatar!",
         "Your teamwork has created something spectacular!"
     };
 

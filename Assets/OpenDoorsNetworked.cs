@@ -12,6 +12,7 @@ public class OpenDoorsNetworked : MonoBehaviour
 
     private Animator[] animators;
     private ConveyorBelt belt;
+    public AudioSource speaker;
 
     void Start()
     {
@@ -38,8 +39,8 @@ public class OpenDoorsNetworked : MonoBehaviour
             {
                 anim.SetTrigger("roomComplete");
             }
-            // play a sound
             belt.UnfreezeAvatar();
+            speaker.Play(0);
 
             my_button_active = false;
             other_button_active = false;
