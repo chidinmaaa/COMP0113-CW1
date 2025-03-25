@@ -13,14 +13,14 @@ public class Respawn_Accessories : MonoBehaviour
     void Start()
     {
         objects = GameObject.FindGameObjectsWithTag("Accessory");
-        originalPositions = new Pose[objects.Length];
-        int index = 0;
-        foreach (GameObject obj in objects)
-        {
-            if (obj == null) continue;
-            originalPositions[index] = obj.transform.GetWorldPose();
-            index++;
-        }
+        //originalPositions = new Pose[objects.Length];
+        //int index = 0;
+        //foreach (GameObject obj in objects)
+        //{
+        //    if (obj == null) continue;
+        //    originalPositions[index] = obj.transform.GetWorldPose();
+        //    index++;
+        //}
 
         
     }
@@ -31,23 +31,25 @@ public class Respawn_Accessories : MonoBehaviour
         for (int i = 0; i < objects.Length; i++)
         {
             GameObject obj = objects[i];
-            if (obj != null)
-            {
-                obj.transform.SetParent(null);
-                obj.transform.SetWorldPose(originalPositions[i]);
+            Destroy(obj);
+            //if (obj != null)
+            //{
+            //    obj.transform.SetParent(null);
+            //    obj.transform.SetWorldPose(originalPositions[i]);
 
-                if (obj.GetComponent<Rigidbody>() == null)
-                {
-                    Rigidbody rb = obj.AddComponent<Rigidbody>();
-                    rb.useGravity = false;
-                }
+            //    if (obj.GetComponent<Rigidbody>() == null)
+            //    {
+            //        Rigidbody rb = obj.AddComponent<Rigidbody>();
+            //        rb.useGravity = false;
+            //    }
 
-                if (obj.GetComponent<XRGrabInteractable>() == null)
-                {
-                    obj.AddComponent<XRGrabInteractable>();
-                }
+            //    if (obj.GetComponent<XRGrabInteractable>() == null)
+            //    {
+            //        obj.AddComponent<XRGrabInteractable>();
+            //    }
 
-            }
+            //}
         }
+        Resources.LoadAll<GameObject>("Accesories");
     }
 }
