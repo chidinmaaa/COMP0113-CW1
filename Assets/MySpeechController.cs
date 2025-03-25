@@ -70,7 +70,7 @@ public class SimpleSpeechController : MonoBehaviour
         switch(room)
         {
             case "entrance":
-                StartCoroutine(SpeakChunksSequentially(_welcomeChunks, 10.0f));
+                StartCoroutine(SpeakChunksSequentially(_welcomeChunks, 5.0f));
                 break;
             case "belt":
                 StartCoroutine(SpeakChunksSequentially(_beltAndBodyLabChunks, pause));
