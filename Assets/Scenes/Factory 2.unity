@@ -3201,7 +3201,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
-  m_FarAttachMode: 1
+  m_FarAttachMode: 2
 --- !u!54 &205251919
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6328,27 +6328,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3123781990223698922, guid: b5e77540a2543d64d8ce554f71b7f212, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3123781990223698922, guid: b5e77540a2543d64d8ce554f71b7f212, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3123781990223698922, guid: b5e77540a2543d64d8ce554f71b7f212, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3123781990223698922, guid: b5e77540a2543d64d8ce554f71b7f212, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3123781990223698922, guid: b5e77540a2543d64d8ce554f71b7f212, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 3123781990223698922, guid: b5e77540a2543d64d8ce554f71b7f212, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -22.5
       objectReference: {fileID: 0}
     - target: {fileID: 4847833799779148869, guid: b5e77540a2543d64d8ce554f71b7f212, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6592,27 +6592,27 @@ PrefabInstance:
       objectReference: {fileID: 305158737848153052, guid: b3e7cd6cb0f1ed34c9c51b0400ccbda0, type: 3}
     - target: {fileID: 9178600087659339208, guid: b5e77540a2543d64d8ce554f71b7f212, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9178600087659339208, guid: b5e77540a2543d64d8ce554f71b7f212, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9178600087659339208, guid: b5e77540a2543d64d8ce554f71b7f212, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 9178600087659339208, guid: b5e77540a2543d64d8ce554f71b7f212, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 9178600087659339208, guid: b5e77540a2543d64d8ce554f71b7f212, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 53
       objectReference: {fileID: 0}
     - target: {fileID: 9178600087659339208, guid: b5e77540a2543d64d8ce554f71b7f212, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -22.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17230,7 +17230,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c3e57177020c9d641a7ca4cda7b4dbac, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: c3e57177020c9d641a7ca4cda7b4dbac, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -18228,7 +18228,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
-  m_FarAttachMode: 1
+  m_FarAttachMode: 2
 --- !u!54 &703062262
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23874,7 +23874,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c3e57177020c9d641a7ca4cda7b4dbac, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: c3e57177020c9d641a7ca4cda7b4dbac, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -24572,7 +24572,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
-  m_FarAttachMode: 1
+  m_FarAttachMode: 2
 --- !u!54 &1049722461
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -32946,7 +32946,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
-  m_FarAttachMode: 1
+  m_FarAttachMode: 2
 --- !u!54 &1427206959
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -44678,7 +44678,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c3e57177020c9d641a7ca4cda7b4dbac, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: c3e57177020c9d641a7ca4cda7b4dbac, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -45655,7 +45655,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c3e57177020c9d641a7ca4cda7b4dbac, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: c3e57177020c9d641a7ca4cda7b4dbac, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
