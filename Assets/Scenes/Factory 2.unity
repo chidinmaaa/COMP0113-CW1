@@ -44566,6 +44566,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7007751851724674312, guid: d267fc783c1e0cd4d8aa7b17494d58d0, type: 3}
+      propertyPath: m_Size.y
+      value: 1.8295377
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007751851724674312, guid: d267fc783c1e0cd4d8aa7b17494d58d0, type: 3}
+      propertyPath: m_Center.x
+      value: -0.003688812
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007751851724674312, guid: d267fc783c1e0cd4d8aa7b17494d58d0, type: 3}
+      propertyPath: m_Center.y
+      value: 5.4755363
+      objectReference: {fileID: 0}
     - target: {fileID: 9192769748214732770, guid: d267fc783c1e0cd4d8aa7b17494d58d0, type: 3}
       propertyPath: m_Name
       value: PressurePlate
