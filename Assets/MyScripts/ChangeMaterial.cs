@@ -18,6 +18,7 @@ public class ChangeMaterial : MonoBehaviour
     // Store initial pose so we can reset
     private Vector3 startPosition;
     private Quaternion startRotation;
+    Material mat;
 
     private void Start()
     {
@@ -25,6 +26,7 @@ public class ChangeMaterial : MonoBehaviour
         // Cache references
         rb = GetComponent<Rigidbody>();
         sphereRenderer = GetComponent<Renderer>();
+        mat = sphereRenderer.sharedMaterial;
 
         // Record starting transform
         startPosition = transform.position;
@@ -41,7 +43,7 @@ public class ChangeMaterial : MonoBehaviour
             if (headRenderer != null)
             {
                 // Transfer sphere's sharedMaterial to the head object
-                headRenderer.sharedMaterial = sphereRenderer.sharedMaterial;
+                headRenderer.sharedMaterial = mat;
             }
         }
         // If we collide with something tagged "Torso"
@@ -52,7 +54,7 @@ public class ChangeMaterial : MonoBehaviour
             if (torsoRenderer != null)
             {
                 // Transfer sphere's sharedMaterial to the torso object
-                torsoRenderer.sharedMaterial = sphereRenderer.sharedMaterial;
+                torsoRenderer.sharedMaterial = mat;
             }
         }
 
@@ -69,6 +71,7 @@ public class ChangeMaterial : MonoBehaviour
         transform.rotation = startRotation;
 
         // Clear any leftover velocity so it doesn't continue flying
+        rb.useGravity = false;
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
     }
