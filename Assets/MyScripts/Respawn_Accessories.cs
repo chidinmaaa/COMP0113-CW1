@@ -21,6 +21,9 @@ public class Respawn_Accessories : MonoBehaviour
         //GameObject[] prefabs = Resources.LoadAll<GameObject>("Accessories");
 
         //originalPositions = new Pose[objects.Length];
+        originalPositions = new Vector3[objects.Length];
+        originalRotations = new Quaternion[objects.Length];
+        names = new String[objects.Length];
         int index = 0;
         foreach (GameObject obj in objects)
         {
@@ -31,6 +34,7 @@ public class Respawn_Accessories : MonoBehaviour
             names[index] = obj.name;
             index++;
         }
+        Debug.Log(names);
 
 
     }
@@ -38,7 +42,8 @@ public class Respawn_Accessories : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Accesory collider " + other.gameObject.name);
+        objects = GameObject.FindGameObjectsWithTag("Accessory");
+        //Debug.Log("Accesory collider " + other.gameObject.name);
         for (int i = 0; i < objects.Length; i++)
         {
             GameObject obj = objects[i];
@@ -46,8 +51,8 @@ public class Respawn_Accessories : MonoBehaviour
             //quaternion quaternion = obj.transform.rotation;
             //String name = obj.name;
             Destroy(obj);
-            //GameObject prefab = Resources.Load<GameObject>("Accessories/" + names[i]);
-            Instantiate(obj, originalPositions[i], originalRotations[i]);
+            GameObject prefab = Resources.Load<GameObject>("Accessories/" + names[i]);
+            Instantiate(prefab, originalPositions[i], originalRotations[i]);
             //if (obj != null)
             //{
             //    obj.transform.SetParent(null);
@@ -66,12 +71,12 @@ public class Respawn_Accessories : MonoBehaviour
 
             //}
         }
+
         //Debug.Log(prefabs.Length);
 
         //foreach (GameObject obj in prefabs) {
         //    Debug.Log(obj.name);
         //    Instantiate(obj);
         //}
-
     }
 }

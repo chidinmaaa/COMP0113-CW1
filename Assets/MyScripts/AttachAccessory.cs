@@ -32,7 +32,7 @@ public class AttachAccessory : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        UnityEngine.Debug.Log(other.gameObject.name);
+        //UnityEngine.Debug.Log(other.gameObject.name);
 
         if (other.gameObject.name == "OurAvatar")
         {
