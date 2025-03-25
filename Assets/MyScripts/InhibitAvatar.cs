@@ -26,12 +26,16 @@ public class InhibitAvatar : MonoBehaviour
     private XRSimpleInteractable interactable;
     private RoomClient roomClient;
     private AvatarManager avatarManager;
+    public NetworkContext context;
 
     public bool voting_complete;
+    public bool me_ready_to_inhibit;
+    public bool other_ready_to_inhibit;
 
     private void Start()
     {
         // Get the path of the original prefab
+        context = NetworkScene.Register(this);
         prefabPath = AssetDatabase.GetAssetPath(prefabReference);
 
         if (string.IsNullOrEmpty(prefabPath))
@@ -60,6 +64,12 @@ public class InhibitAvatar : MonoBehaviour
         }
     }
 
+
+    private struct Message
+    {
+        public bool ready_to_inhibit;
+    }
+
     private void Interactable_SelectEntered(SelectEnterEventArgs arg0)
     {
         if (string.IsNullOrEmpty(prefabPath))
@@ -68,39 +78,56 @@ public class InhibitAvatar : MonoBehaviour
             return;
         }
 
+        me_ready_to_inhibit = true;
+        context.SendJson(new Message()
+        {
+            ready_to_inhibit = true
+        });
+
         // Apply changes from the current scene object to the prefab
         PrefabUtility.SaveAsPrefabAssetAndConnect(editingAvatar, prefabPath, InteractionMode.UserAction);
-
-        GameObject updatedPrefab = Resources.Load<GameObject>("MyAvatars/UbiqAvatars/NewAvatar");
-        UnityEngine.Debug.Log("inhibit button got pressed");
-
-        // enable script to ensure it can be inhabited
-        //Ubiq.Avatars.Avatar avatarScript = updatedPrefab.GetComponent<Ubiq.Avatars.Avatar>();
-        //// Enable the script
-        //if (avatarScript != null)
-        //    avatarScript.enabled = true;
-
-        Ubiq.HeadAndHandsAvatar HeadAndHandsAvatarScript = updatedPrefab.GetComponent<Ubiq.HeadAndHandsAvatar>();
-        // Enable the script
-        if (HeadAndHandsAvatarScript != null)
-            HeadAndHandsAvatarScript.enabled = true;
-
-        if (updatedPrefab != null)
+        
+        if (me_ready_to_inhibit & other_ready_to_inhibit)
         {
-            Vector3 scale = updatedPrefab.transform.localScale;
-            scale.x = 1;
-            scale.y = 1;
-            scale.z = 1;
-            updatedPrefab.transform.localScale = scale;
 
-            if (voting_complete)
+            GameObject updatedPrefab = Resources.Load<GameObject>("MyAvatars/UbiqAvatars/NewAvatar");
+            UnityEngine.Debug.Log("inhibit button got pressed");
+
+            // enable script to ensure it can be inhabited
+            //Ubiq.Avatars.Avatar avatarScript = updatedPrefab.GetComponent<Ubiq.Avatars.Avatar>();
+            //// Enable the script
+            //if (avatarScript != null)
+            //    avatarScript.enabled = true;
+
+            Ubiq.HeadAndHandsAvatar HeadAndHandsAvatarScript = updatedPrefab.GetComponent<Ubiq.HeadAndHandsAvatar>();
+            // Enable the script
+            if (HeadAndHandsAvatarScript != null)
+                HeadAndHandsAvatarScript.enabled = true;
+
+            if (updatedPrefab != null)
             {
-                avatarManager.avatarPrefab = updatedPrefab;
+                Vector3 scale = updatedPrefab.transform.localScale;
+                scale.x = 1;
+                scale.y = 1;
+                scale.z = 1;
+                updatedPrefab.transform.localScale = scale;
+
+                if (voting_complete)
+                {
+                    avatarManager.avatarPrefab = updatedPrefab;
+                }
+            }
+            else
+            {
+                UnityEngine.Debug.LogWarning("ChangeAvatarPrefab: No prefab found");
             }
         }
-        else
-        {
-            UnityEngine.Debug.LogWarning("ChangeAvatarPrefab: No prefab found");
-        }
     }
+
+    public void ProcessMessage(ReferenceCountedSceneGraphMessage message)
+    {
+        var m = message.FromJson<Message>();
+        other_ready_to_inhibit = m.ready_to_inhibit;
+    }
+
 }
