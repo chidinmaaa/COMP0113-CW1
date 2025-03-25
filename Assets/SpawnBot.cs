@@ -21,6 +21,6 @@ public class SpawnBot : MonoBehaviour
         int id = Random.Range(0, num_bots);
         GameObject bot = bots[id];
         Instantiate(bot, gameObject.transform);
-        Debug.Log("Spawned " + bot.name);
+        //Debug.Log("Spawned " + bot.name);
     }
 }
