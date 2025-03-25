@@ -97,7 +97,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7234463091909531353, guid: 3c1793919a93a0d4b98232e671af42ff, type: 3}
       propertyPath: speed
-      value: 500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 7234463091909531353, guid: 3c1793919a93a0d4b98232e671af42ff, type: 3}
       propertyPath: direction.x
@@ -111,7 +111,8 @@ PrefabInstance:
       propertyPath: direction.z
       value: -1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3570073191180230879, guid: 3c1793919a93a0d4b98232e671af42ff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -183,7 +184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7234463091909531353, guid: 3c1793919a93a0d4b98232e671af42ff, type: 3}
       propertyPath: speed
-      value: 500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 7234463091909531353, guid: 3c1793919a93a0d4b98232e671af42ff, type: 3}
       propertyPath: direction.x
@@ -197,7 +198,8 @@ PrefabInstance:
       propertyPath: direction.z
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3570073191180230879, guid: 3c1793919a93a0d4b98232e671af42ff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -265,13 +267,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7234463091909531353, guid: 3c1793919a93a0d4b98232e671af42ff, type: 3}
       propertyPath: speed
-      value: 500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 7234463091909531353, guid: 3c1793919a93a0d4b98232e671af42ff, type: 3}
       propertyPath: direction.x
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3570073191180230879, guid: 3c1793919a93a0d4b98232e671af42ff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -347,9 +350,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7234463091909531353, guid: 3c1793919a93a0d4b98232e671af42ff, type: 3}
       propertyPath: speed
-      value: 500
+      value: 1000
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3570073191180230879, guid: 3c1793919a93a0d4b98232e671af42ff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
