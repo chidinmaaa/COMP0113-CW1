@@ -1,11 +1,17 @@
 using System.Diagnostics;
+using System.Collections.Generic;
 using UnityEngine;
+using Ubiq.Messaging;
+using Ubiq.Rooms;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable))]
 public class ChangeMaterial : MonoBehaviour
 {
+    private NetworkContext context;
     private Rigidbody rb;
     private Renderer sphereRenderer;
 
@@ -15,6 +21,7 @@ public class ChangeMaterial : MonoBehaviour
 
     private void Start()
     {
+        context = NetworkScene.Register(this);
         // Cache references
         rb = GetComponent<Rigidbody>();
         sphereRenderer = GetComponent<Renderer>();
@@ -51,6 +58,8 @@ public class ChangeMaterial : MonoBehaviour
 
         // Once the material is transferred, reset the sphere
         ResetSphere();
+
+        context.SendJson(new Message(transform.position, transform.rotation));
     }
 
     private void ResetSphere()
@@ -62,5 +71,24 @@ public class ChangeMaterial : MonoBehaviour
         // Clear any leftover velocity so it doesn't continue flying
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
+    }
+
+    public void ProcessMessage(ReferenceCountedSceneGraphMessage message)
+    {
+        var data = message.FromJson<Message>();
+        transform.position = data.position;
+        transform.rotation = data.rotation;
+    }
+
+    private struct Message
+    {
+        public Vector3 position;
+        public Quaternion rotation;
+
+        public Message(Vector3 position, Quaternion rotation)
+        {
+            this.position = position;
+            this.rotation = rotation;
+        }
     }
 }
