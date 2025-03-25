@@ -28,7 +28,9 @@ public class AttachObject : MonoBehaviour
     private Quaternion lastRotation;
 
     Rigidbody rigidbody;
-    Pose worldPose;
+    //Pose worldPose;
+    private Vector3 startPosition;
+    private Quaternion startRotation;
     Material mat;
 
     private void Start()
@@ -44,7 +46,10 @@ public class AttachObject : MonoBehaviour
         Renderer renderer = GetComponent<Renderer>();
         mat = renderer.sharedMaterial;
         rigidbody = gameObject.GetComponent<Rigidbody>();
-        worldPose = transform.GetWorldPose();
+        //worldPose = transform.GetWorldPose();
+
+        startPosition = transform.position;
+        startRotation = transform.rotation;
 
         currentUserID = UserIDManager.Instance.GetUserID(roomClient.Me.uuid);
         UnityEngine.Debug.Log("curren user id " + currentUserID);
@@ -67,12 +72,14 @@ public class AttachObject : MonoBehaviour
             TorsoRenderer.sharedMaterial = mat;
         }
 
-        rigidbody.useGravity = false;
-        rigidbody.linearVelocity = Vector3.zero;
-        rigidbody.angularVelocity = Vector3.zero;
-        
+        //rigidbody.useGravity = false;
+        //rigidbody.linearVelocity = Vector3.zero;
+        //rigidbody.angularVelocity = Vector3.zero;
 
-        transform.SetWorldPose(worldPose);
+
+        //transform.SetWorldPose(worldPose);
+
+        ResetSphere();
 
         //if (assignedUserID == currentUserID)
         //{
@@ -82,6 +89,17 @@ public class AttachObject : MonoBehaviour
 
         context.SendJson(new Message(false, transform.position, transform.rotation));
 
+    }
+
+    private void ResetSphere()
+    {
+        // Move back to our initial position & rotation
+        transform.position = startPosition;
+        transform.rotation = startRotation;
+
+        // Clear any leftover velocity so it doesn't continue flying
+        rigidbody.linearVelocity = Vector3.zero;
+        rigidbody.angularVelocity = Vector3.zero;
     }
 
     private void OnDestroy()
