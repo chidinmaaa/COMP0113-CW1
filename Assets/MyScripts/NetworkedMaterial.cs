@@ -41,12 +41,12 @@ public class NetworkedMaterial : MonoBehaviour
             {
                 avatarHead.GetComponent<Renderer>().sharedMaterial = mat;
 
-                UnityEngine.Debug.Log($"changed head by {data.materialIndex-1}");
+                
             }
             else if (data.part == "Torso" && avatarTorso != null)
             {
                 avatarTorso.GetComponent<Renderer>().sharedMaterial = mat;
-                UnityEngine.Debug.Log($"changed torso by {data.materialIndex-1}");
+                
             }
         }
         else

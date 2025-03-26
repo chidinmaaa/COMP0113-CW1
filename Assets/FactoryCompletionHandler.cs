@@ -7,13 +7,13 @@ public class FactoryCompletionHandler : MonoBehaviour
     public bool voting_complete;
     private FireworksFinalRoom fireworks;
     private Animator final_door;
-    private InhibitAvatar inhibit_button;
+    private InhabitAvatar inhibit_button;
 
     void Start()
     {
         fireworks = GetComponentInChildren<FireworksFinalRoom>();
         final_door = GetComponentInChildren<Animator>();
-        inhibit_button = GetComponentInChildren<InhibitAvatar>();
+        inhibit_button = GetComponentInChildren<InhabitAvatar>();
     }
 
     // Update is called once per frame

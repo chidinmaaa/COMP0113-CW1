@@ -16,7 +16,7 @@ public class PadCollider : MonoBehaviour
             _isPressed = true;
         }
 
-        Debug.Log("pad");
+        
     }
 
     private void OnTriggerExit(Collider other)
@@ -26,7 +26,7 @@ public class PadCollider : MonoBehaviour
             curtain.transform.position -= new Vector3(0, 3, 0);
             _isPressed =false;
         }
-        Debug.Log("pad exit");
+        
     }
 
 }
