@@ -16,7 +16,6 @@ namespace AvatarFactory
     {
         private NetworkContext context;
         private FactoryCompletionHandler completion_handler;
-
         public bool my_vote_cast = false;
         private bool other_vote_cast = false;
 

@@ -6,16 +6,13 @@ using Ubiq.Messaging;
 public class MyNetworkedObject : MonoBehaviour
 {
     NetworkContext context;
+    Vector3 lastPosition;
 
-    // Start is called before the first frame update
     void Start()
     {
         context = NetworkScene.Register(this);
     }
 
-    Vector3 lastPosition;
-
-    // Update is called once per frame
     void Update()
     {
         if (lastPosition != transform.localPosition)
@@ -35,13 +32,8 @@ public class MyNetworkedObject : MonoBehaviour
 
     public void ProcessMessage(ReferenceCountedSceneGraphMessage message)
     {
-        // Parse the message
         var m = message.FromJson<Message>();
-
-        // Use the message to update the Component
         transform.localPosition = m.position;
-
-        // Make sure the logic in Update doesn't trigger as a result of this message
         lastPosition = transform.localPosition;
     }
 }

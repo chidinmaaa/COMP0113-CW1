@@ -7,7 +7,7 @@ public class OpenDoorsNetworked : MonoBehaviour
 {
     NetworkContext context;
     public bool my_button_active = false;
-    private bool other_button_active = false;
+    private bool other_button_active = true;
     private bool last_button_state = false;
 
     private Animator[] animators;

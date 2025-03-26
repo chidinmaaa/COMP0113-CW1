@@ -16,8 +16,6 @@ public class TriggerAudio : MonoBehaviour
         if (collision.gameObject.tag == "avatar")
         {
             var flag = transform.name;
-            Debug.Log("COLLIDED with " + flag);
-            //narration_handler.GetType().GetProperty(flag).SetValue(narration_handler, true);
             switch (flag)
             {
                 case "in_entrance":
@@ -39,7 +37,7 @@ public class TriggerAudio : MonoBehaviour
                     narration_handler.on_conveyor = true;
                     break;
             }
-            Destroy(transform.GetComponent<BoxCollider>());
+            Destroy(transform.GetComponent<BoxCollider>()); // ensure narration only plays once
         }
     }
 }

@@ -19,7 +19,6 @@ public class NarrationHandler : MonoBehaviour
         pause = 1.0f;
         controller = GetComponent<SimpleSpeechController>();
         avatarManager = GameObject.Find("Avatar Manager");
-
     }
 
     void Update()
@@ -31,7 +30,6 @@ public class NarrationHandler : MonoBehaviour
                 in_entrance = false;
             }
             if (in_body_lab){
-                //controller.Speak("body_lab", pause);
                 in_body_lab = false;
             }
             if (in_style_station)
