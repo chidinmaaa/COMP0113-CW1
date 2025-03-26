@@ -10,7 +10,8 @@ public class SimpleSpeechController : MonoBehaviour
     private string[] _welcomeChunks = new string[]{
         "Welcome to Fusion Foundry, awesome creators!",
         "This is where your avatar-making adventure begins!",
-        "Look around for two glowing buttons on the walls—you'll each need to press one at the same time to open the door.",
+        "Look around for two gold buttons on the walls—you'll each need to press one at the same time to open the door.",
+        "Then, press the buttons again to send your avatar to the next room",
         "Teamwork makes the dream work! Ready to create something amazing together?",
         "Find those buttons and let's get this avatar party started!"
     };
@@ -89,7 +90,7 @@ public class SimpleSpeechController : MonoBehaviour
         yield return new WaitForSeconds(pause);
 
         for (int i = 0; i < chunks.Length; i++) {
-            //Debug.Log($"Speaking chunk {i+1}/{chunks.Length}: {chunks[i]}");
+            Debug.Log($"Speaking chunk {i+1}/{chunks.Length}: {chunks[i]}");
             
             // Speak the current chunk
             _ttsSpeaker.SpeakQueued(chunks[i]);

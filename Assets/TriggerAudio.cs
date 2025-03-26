@@ -39,6 +39,7 @@ public class TriggerAudio : MonoBehaviour
                     narration_handler.on_conveyor = true;
                     break;
             }
+            Destroy(transform.GetComponent<BoxCollider>());
         }
     }
 }
