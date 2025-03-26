@@ -1,7 +1,10 @@
 using System;
 using System.Linq;
+using Ubiq.Messaging;
+using Ubiq.Rooms;
 using Unity.Mathematics;
 using Unity.XR.CoreUtils;
+using Unity.XR.CoreUtils.Datums;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
@@ -15,8 +18,18 @@ public class Respawn_Accessories : MonoBehaviour
     private Vector3[] originalPositions;
     private String[] names;
 
+    private NetworkContext context;
+    private XRGrabInteractable interactable;
+    private RoomClient roomClient;
+
     void Start()
     {
+
+        context = NetworkScene.Register(this);
+        roomClient = RoomClient.Find(this);
+
+
+
         objects = GameObject.FindGameObjectsWithTag("Accessory");
         //GameObject[] prefabs = Resources.LoadAll<GameObject>("Accessories");
 
@@ -34,6 +47,7 @@ public class Respawn_Accessories : MonoBehaviour
             names[index] = obj.name;
             index++;
         }
+
         Debug.Log(names);
 
 
@@ -41,6 +55,12 @@ public class Respawn_Accessories : MonoBehaviour
 
 
     private void OnTriggerEnter(Collider other)
+    {
+        context.SendJson(new Message(true));
+        respawn();
+    }
+
+    private void respawn()
     {
         objects = GameObject.FindGameObjectsWithTag("Accessory");
         //Debug.Log("Accesory collider " + other.gameObject.name);
@@ -78,5 +98,26 @@ public class Respawn_Accessories : MonoBehaviour
         //    Debug.Log(obj.name);
         //    Instantiate(obj);
         //}
+    }
+    public void ProcessMessage(ReferenceCountedSceneGraphMessage message)
+    {
+        var data = message.FromJson<Message>();
+        if (data.held)
+        {
+            respawn();
+        }
+    }
+
+
+    private struct Message
+    {
+        public bool held;
+
+
+        public Message(bool held)
+        {
+            this.held = held;
+
+        }
     }
 }
