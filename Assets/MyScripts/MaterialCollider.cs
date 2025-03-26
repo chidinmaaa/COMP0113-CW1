@@ -69,10 +69,14 @@ public class MaterialCollider : MonoBehaviour
             }
 
             context.SendJson(new Message(transform.position, transform.rotation));
+        } else if (other.gameObject.CompareTag("Curtain"))
+        {
+            ResetSphere();
+            return;
         }
 
-        // Once the material is transferred, reset the sphere
-        ResetSphere();
+            // Once the material is transferred, reset the sphere
+            ResetSphere();
 
         
     }
