@@ -20,6 +20,8 @@ public class Respawn_Accessories : MonoBehaviour
 
     void Start()
     {
+        context = NetworkScene.Register(this);
+
         objects = GameObject.FindGameObjectsWithTag("Accessory");
 
         originalPositions = new Vector3[objects.Length];
