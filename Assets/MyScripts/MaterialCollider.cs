@@ -52,6 +52,8 @@ public class MaterialCollider : MonoBehaviour
 
                 notifier?.NotifyMaterialChange("Head", ID);
             }
+
+            context.SendJson(new Message(transform.position, transform.rotation));
         }
         // If we collide with something tagged "Torso"
         else if (other.gameObject.CompareTag("Torso") && !isHead)
@@ -65,12 +67,14 @@ public class MaterialCollider : MonoBehaviour
 
                 notifier?.NotifyMaterialChange("Torso", ID);
             }
+
+            context.SendJson(new Message(transform.position, transform.rotation));
         }
 
         // Once the material is transferred, reset the sphere
         ResetSphere();
 
-        context.SendJson(new Message(transform.position, transform.rotation));
+        
     }
 
     private void ResetSphere()
