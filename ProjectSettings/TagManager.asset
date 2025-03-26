@@ -14,6 +14,7 @@ TagManager:
   - Pad
   - Accessory
   - bot
+  - Curtain
   layers:
   - Default
   - TransparentFX

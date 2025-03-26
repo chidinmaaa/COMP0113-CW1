@@ -20,7 +20,7 @@ public class SimpleSpeechController : MonoBehaviour
         "It's carrying your avatar-in-progress through each creative zone!",
         "You made it to the second room!",
         "Welcome to the Body Lab!",
-        "See those cool sliders on the wall?",
+        "See those cool sliders?",
         "Each of you can grab one to adjust your avatar's height, width, and depth.",
         "One of you might want to make your avatar super tall, while the other prefers something different—talk it out and find the perfect balance!",
         "When you're both happy with the shape, hit those magic buttons together to send your creation to the next exciting station!"
@@ -28,7 +28,7 @@ public class SimpleSpeechController : MonoBehaviour
     private string[] _styleStationChunks = new string[]{
         "Woohoo, you've reached the Style Station!",
         "Check out those colorful texture spheres floating around—they're how you'll give your avatar some pizzazz!",
-        "But here's the fun part: one of you needs to raise the platform while the other throws the spheres at your avatar.",
+        "But here's the fun part: one of you needs to raise the platform while the other collides the spheres at your avatar.",
         "Timing is everything!",
         "Communicate when to raise and when to throw for the perfect hit.",
         "Once your avatar is looking fabulous with its new style, both hit those buttons to continue your creative journey!"
@@ -38,8 +38,6 @@ public class SimpleSpeechController : MonoBehaviour
         "This room is packed with fun add-ons for your avatar—hats, hair, bags, you name it!",
         "Take turns picking out accessories and placing them on your creation.",
         "Some might be in hard-to-reach spots, so you'll need to help each other out.",
-        "Can you grab that crown while I hold this platform?",
-        "That's the spirit!",
         "Once your avatar is decked out in all its glory, find those twin buttons and press them together to move on!"
     };
     private string[] _finalRoomChunks = new string[]{
