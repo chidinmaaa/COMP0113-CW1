@@ -33,20 +33,20 @@ public class NetworkedMaterial : MonoBehaviour
     {
         var data = message.FromJson<MaterialChangeMessage>();
 
-        if (data.materialIndex >= 0 && data.materialIndex < sphereObjects.Length)
+        if (data.materialIndex > 0 && data.materialIndex < sphereObjects.Length)
         {
-            Material mat = sphereObjects[data.materialIndex].GetComponent<Renderer>().sharedMaterial;
+            Material mat = sphereObjects[data.materialIndex-1].GetComponent<Renderer>().sharedMaterial;
 
             if (data.part == "Head" && avatarHead != null)
             {
                 avatarHead.GetComponent<Renderer>().sharedMaterial = mat;
 
-                UnityEngine.Debug.Log($"changed head by {data.materialIndex}");
+                UnityEngine.Debug.Log($"changed head by {data.materialIndex-1}");
             }
             else if (data.part == "Torso" && avatarTorso != null)
             {
                 avatarTorso.GetComponent<Renderer>().sharedMaterial = mat;
-                UnityEngine.Debug.Log($"changed torso by {data.materialIndex}");
+                UnityEngine.Debug.Log($"changed torso by {data.materialIndex-1}");
             }
         }
         else
