@@ -31,6 +31,7 @@ public class AttachObject : MonoBehaviour
     //Pose worldPose;
     private Vector3 startPosition;
     private Quaternion startRotation;
+    private Vector3 scale;
     Material mat;
 
     private void Start()
@@ -50,6 +51,7 @@ public class AttachObject : MonoBehaviour
 
         startPosition = transform.position;
         startRotation = transform.rotation;
+        scale = transform.localScale;
 
         currentUserID = UserIDManager.Instance.GetUserID(roomClient.Me.uuid);
         UnityEngine.Debug.Log("curren user id " + currentUserID);
@@ -96,6 +98,7 @@ public class AttachObject : MonoBehaviour
         // Move back to our initial position & rotation
         transform.position = startPosition;
         transform.rotation = startRotation;
+        transform.localScale = scale;
 
         // Clear any leftover velocity so it doesn't continue flying
         rigidbody.linearVelocity = Vector3.zero;
