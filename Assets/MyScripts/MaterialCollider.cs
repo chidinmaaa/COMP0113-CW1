@@ -10,19 +10,19 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable))]
-public class OtherChangeMaterial : MonoBehaviour
+public class MaterialCollider : MonoBehaviour
 {
     private NetworkContext context;
     private Rigidbody rb;
     private Renderer sphereRenderer;
     public bool isHead;
-    public Transform avatarHead;
-    public Transform avatarTorso;
+    public int ID;
 
     // Store initial pose so we can reset
     private Vector3 startPosition;
     private Quaternion startRotation;
     Material mat;
+    NetworkedMaterial notifier;
 
     private void Start()
     {
@@ -31,6 +31,7 @@ public class OtherChangeMaterial : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         sphereRenderer = GetComponent<Renderer>();
         mat = sphereRenderer.sharedMaterial;
+        notifier = FindObjectOfType<NetworkedMaterial>();
 
         // Record starting transform
         startPosition = transform.position;
@@ -39,9 +40,6 @@ public class OtherChangeMaterial : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        bool head = false;
-        bool torso = false;
-
         // If we collide with something tagged "Head"
         if (other.gameObject.CompareTag("Head") && isHead)
         {
@@ -51,8 +49,8 @@ public class OtherChangeMaterial : MonoBehaviour
             {
                 // Transfer sphere's sharedMaterial to the head object
                 headRenderer.sharedMaterial = mat;
-                head = true;
-                torso = false;
+
+                notifier?.NotifyMaterialChange("Head", ID);
             }
         }
         // If we collide with something tagged "Torso"
@@ -64,30 +62,15 @@ public class OtherChangeMaterial : MonoBehaviour
             {
                 // Transfer sphere's sharedMaterial to the torso object
                 torsoRenderer.sharedMaterial = mat;
-                torso = true;
-                head = false;
+
+                notifier?.NotifyMaterialChange("Torso", ID);
             }
         }
 
         // Once the material is transferred, reset the sphere
         ResetSphere();
 
-        // head = 1; torso = 2; neither = 3
-
-        if (head)
-        {
-            context.SendJson(new Message(transform.position, transform.rotation, mat, 1));
-        }
-        else if (torso)
-        {
-            context.SendJson(new Message(transform.position, transform.rotation, mat, 2));
-        }
-        else
-        {
-            context.SendJson(new Message(transform.position, transform.rotation, mat, 3));
-        }
-
-        //context.SendJson(new Message(transform.position, transform.rotation));
+        context.SendJson(new Message(transform.position, transform.rotation));
     }
 
     private void ResetSphere()
@@ -107,43 +90,17 @@ public class OtherChangeMaterial : MonoBehaviour
         var data = message.FromJson<Message>();
         transform.position = data.position;
         transform.rotation = data.rotation;
-        float id = data.objID;
-
-        UnityEngine.Debug.Log("received material: " + data.material);
-
-        if (id == 1)
-        {
-            // head
-            Renderer headRenderer = avatarHead.gameObject.GetComponent<Renderer>();
-            if (headRenderer != null)
-            {
-                // Transfer sphere's sharedMaterial to the torso object
-                headRenderer.sharedMaterial = data.material;
-            }
-        } else if (id == 2)
-        {
-            Renderer torsoRenderer = avatarTorso.gameObject.GetComponent<Renderer>();
-            if (torsoRenderer != null)
-            {
-                // Transfer sphere's sharedMaterial to the torso object
-                torsoRenderer.sharedMaterial = data.material;
-            }
-        }
     }
 
     private struct Message
     {
         public Vector3 position;
         public Quaternion rotation;
-        public Material material;
-        public float objID;
 
-        public Message(Vector3 position, Quaternion rotation, Material material, float objID)
+        public Message(Vector3 position, Quaternion rotation)
         {
             this.position = position;
             this.rotation = rotation;
-            this.material = material;
-            this.objID = objID;
         }
     }
 }
