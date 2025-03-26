@@ -1,3 +1,6 @@
+
+# COMP0113 CW1 (Group 13) - 'Fusion Foundary' 
+
 Authors: Gauri Desai, Chidinma Ezeji, Ramneek Ahluwalia and Ofir Francis
 
 
