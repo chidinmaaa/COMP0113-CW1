@@ -74,20 +74,11 @@ public class AttachObject : MonoBehaviour
             TorsoRenderer.sharedMaterial = mat;
         }
 
-        //rigidbody.useGravity = false;
-        //rigidbody.linearVelocity = Vector3.zero;
-        //rigidbody.angularVelocity = Vector3.zero;
 
-
-        //transform.SetWorldPose(worldPose);
 
         ResetSphere();
 
-        //if (assignedUserID == currentUserID)
-        //{
-        //    UnityEngine.Debug.Log("this is " + assignedUserID);
-        //    context.SendJson(new Message(false, transform.position, transform.rotation));
-        //}
+
 
         context.SendJson(new Message(false, transform.position, transform.rotation));
 
@@ -118,11 +109,6 @@ public class AttachObject : MonoBehaviour
             lastPosition = transform.position;
             lastRotation = transform.rotation;
 
-            //if (assignedUserID == currentUserID)
-            //{
-            //    UnityEngine.Debug.Log("this is " + assignedUserID);
-            //    context.SendJson(new Message(true, lastPosition, lastRotation));
-            //}
 
             context.SendJson(new Message(true, lastPosition, lastRotation));
         }
@@ -132,11 +118,6 @@ public class AttachObject : MonoBehaviour
     {
         isHeld = true;
 
-        //if (assignedUserID == currentUserID)
-        //{
-        //    UnityEngine.Debug.Log("this is " + assignedUserID);
-        //    context.SendJson(new Message(true, transform.position, transform.rotation));
-        //}
 
         context.SendJson(new Message(true, transform.position, transform.rotation));
 
@@ -146,12 +127,7 @@ public class AttachObject : MonoBehaviour
     {
         isHeld = false;
 
-        // Notify network that this player released the object
-        //if (assignedUserID == currentUserID)
-        //{
-        //    UnityEngine.Debug.Log("this is " + assignedUserID);
-        //    context.SendJson(new Message(false, lastPosition, lastRotation));
-        //}
+
 
         context.SendJson(new Message(false, lastPosition, lastRotation));
     }
