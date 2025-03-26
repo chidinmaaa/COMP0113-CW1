@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5170385778715680413}
   - component: {fileID: 3811994609815208842}
   - component: {fileID: 6473960545460365412}
-  - component: {fileID: 5263982420819826599}
   - component: {fileID: 2349663822125792947}
   - component: {fileID: 3542931394078280761}
   - component: {fileID: 1877354294188463964}
@@ -242,20 +241,6 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
---- !u!114 &5263982420819826599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5170385778717933661}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ce96481b46ed23479f24bdd080aade2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: {x: 0, y: 0.45, z: -0.1}
-  rotation: {x: 0, y: 0, z: 0}
 --- !u!64 &2349663822125792947
 MeshCollider:
   m_ObjectHideFlags: 0

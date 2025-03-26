@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 1059971985713192424}
   - component: {fileID: 2396785475966566158}
   - component: {fileID: 3562067131230730614}
-  - component: {fileID: 6835695382128911713}
   - component: {fileID: 7907589413332984804}
   m_Layer: 0
   m_Name: fantasyCap
@@ -301,20 +300,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eeb87458e68c9c459d84b72636df686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6835695382128911713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8040716064966382582}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ce96481b46ed23479f24bdd080aade2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: {x: 0, y: 0.684, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
 --- !u!114 &7907589413332984804
 MonoBehaviour:
   m_ObjectHideFlags: 0

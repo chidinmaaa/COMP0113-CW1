@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 5311334144902663468}
   - component: {fileID: 2394224147241996864}
   - component: {fileID: 2731050119420866784}
-  - component: {fileID: 5330057028427724365}
   - component: {fileID: 3812458830359800854}
   m_Layer: 0
   m_Name: hairPigtail
@@ -299,20 +298,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eeb87458e68c9c459d84b72636df686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5330057028427724365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7548076478622351931}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ce96481b46ed23479f24bdd080aade2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: {x: 0, y: 0.45, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
 --- !u!114 &3812458830359800854
 MonoBehaviour:
   m_ObjectHideFlags: 0
