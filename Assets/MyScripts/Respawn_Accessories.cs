@@ -13,7 +13,7 @@ public class Respawn_Accessories : MonoBehaviour
     private GameObject[] objects;
     private NetworkContext context;
 
-    //private Pose[] originalPositions;
+    
     private Quaternion[] originalRotations;
     private Vector3[] originalPositions;
     private String[] names;

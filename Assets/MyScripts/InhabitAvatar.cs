@@ -10,12 +10,8 @@ using Random = UnityEngine.Random;
 using UnityEditor;
 using System.IO;
 
-/// <summary>
-/// This class listens to the select event of an XRI interactable button. 
-/// When pressed, it fetches the specified prefab and sets it as 
-/// the Avatar Prefab in AvatarManager.
-/// </summary>
-public class InhibitAvatar : MonoBehaviour
+
+public class InhabitAvatar : MonoBehaviour
 {
     public GameObject editingAvatar;
     [Header("Original Prefab Reference")]
@@ -42,8 +38,6 @@ public class InhibitAvatar : MonoBehaviour
         {
             UnityEngine.Debug.LogError("RuntimePrefabSaver: Original prefab path not found. Ensure this object is a prefab instance.");
         }
-
-        UnityEngine.Debug.Log("ChangeAvatarPrefab Script Initialized");
 
         // Connect up the event for the XRI button.
         interactable = GetComponent<XRSimpleInteractable>();
@@ -86,18 +80,11 @@ public class InhibitAvatar : MonoBehaviour
 
         // Apply changes from the current scene object to the prefab
         PrefabUtility.SaveAsPrefabAssetAndConnect(editingAvatar, prefabPath, InteractionMode.UserAction);
-        
+
         if (me_ready_to_inhibit & other_ready_to_inhibit)
         {
 
             GameObject updatedPrefab = Resources.Load<GameObject>("MyAvatars/UbiqAvatars/NewAvatar");
-            UnityEngine.Debug.Log("inhibit button got pressed");
-
-            // enable script to ensure it can be inhabited
-            //Ubiq.Avatars.Avatar avatarScript = updatedPrefab.GetComponent<Ubiq.Avatars.Avatar>();
-            //// Enable the script
-            //if (avatarScript != null)
-            //    avatarScript.enabled = true;
 
             Ubiq.HeadAndHandsAvatar HeadAndHandsAvatarScript = updatedPrefab.GetComponent<Ubiq.HeadAndHandsAvatar>();
             // Enable the script

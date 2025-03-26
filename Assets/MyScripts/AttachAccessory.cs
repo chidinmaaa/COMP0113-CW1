@@ -11,9 +11,6 @@ public class AttachAccessory : MonoBehaviour
     private NetworkContext context;
     private XRGrabInteractable interactable;
     private RoomClient roomClient;
-    private string currentUserID;
-
-    public string assignedUserID;
 
     [SerializeField]
     private Vector3 position;
@@ -25,9 +22,7 @@ public class AttachAccessory : MonoBehaviour
         context = NetworkScene.Register(this);
         interactable = GetComponent<XRGrabInteractable>();
         roomClient = RoomClient.Find(this);
-        currentUserID = UserIDManager.Instance.GetUserID(roomClient.Me.uuid);
-
-        assignedUserID = assignedUserID == "" ? "-1" : assignedUserID;
+        
     }
 
     private void OnCollisionEnter(Collision other)
@@ -36,7 +31,6 @@ public class AttachAccessory : MonoBehaviour
 
         if (other.gameObject.name == "OurAvatar")
         {
-            UnityEngine.Debug.Log("collided correctly");
 
             transform.SetParent(other.transform);
             transform.localPosition = position;
@@ -63,10 +57,7 @@ public class AttachAccessory : MonoBehaviour
             Destroy(GetComponent<XRGrabInteractable>());
             Destroy(GetComponent<Rigidbody>());
 
-            if (assignedUserID == currentUserID || assignedUserID == "-1")
-            {
-                context.SendJson(new Message(transform.position, transform.rotation));
-            }
+            context.SendJson(new Message(transform.position, transform.rotation));
         }
     }
 

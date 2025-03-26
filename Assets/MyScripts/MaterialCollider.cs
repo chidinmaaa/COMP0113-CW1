@@ -43,7 +43,7 @@ public class MaterialCollider : MonoBehaviour
         // If we collide with something tagged "Head"
         if (other.gameObject.CompareTag("Head") && isHead)
         {
-            UnityEngine.Debug.Log("Collided with Head");
+            
             Renderer headRenderer = other.gameObject.GetComponent<Renderer>();
             if (headRenderer != null)
             {
@@ -58,7 +58,7 @@ public class MaterialCollider : MonoBehaviour
         // If we collide with something tagged "Torso"
         else if (other.gameObject.CompareTag("Torso") && !isHead)
         {
-            UnityEngine.Debug.Log("Collided with Torso");
+            
             Renderer torsoRenderer = other.gameObject.GetComponent<Renderer>();
             if (torsoRenderer != null)
             {
