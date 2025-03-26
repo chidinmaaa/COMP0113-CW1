@@ -26695,7 +26695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84fddd3ea47a42d4e96a141597273963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 60
   boost: 1
   direction: {x: -1, y: 0, z: 0}
   onBelt: []
@@ -29008,7 +29008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84fddd3ea47a42d4e96a141597273963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 60
   boost: 1
   direction: {x: 1, y: 0, z: 0}
   onBelt: []
@@ -31679,7 +31679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84fddd3ea47a42d4e96a141597273963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 60
   boost: 1
   direction: {x: -1, y: 0, z: 0}
   onBelt: []
@@ -43393,7 +43393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84fddd3ea47a42d4e96a141597273963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 60
   boost: 1
   direction: {x: 1, y: 0, z: 0}
   onBelt: []
